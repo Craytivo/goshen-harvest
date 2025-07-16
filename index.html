@@ -5,17 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pro Gym Install | Edmonton Gym Equipment Services</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          heading: ['Outfit', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+  <!-- Google Fonts: Outfit for headings, Inter for body -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans scroll-smooth">
 
 <!-- Header -->
 <header id="site-header"
   class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm 
-         transition-transform duration-300 ease-in-out">
+         transition-transform duration-300 ease-in-out font-heading">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    
     <!-- Logo -->
     <a href="#" class="flex items-center">
-      <img src="assets\images\goshen-logo.png"
+      <img src="assets/images/goshen-logo.png"
            alt="Goshen Gym Installs Logo"
            class="h-[60px] sm:h-[70px] w-auto scale-110 sm:scale-125 transform origin-left" />
     </a>
@@ -33,28 +51,27 @@
     </nav>
 
     <!-- Mobile Hamburger -->
-    <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none">
-  <span id="icon-bar-1" class="block h-0.5 w-6 bg-gray-800 transition-all duration-300"></span>
-  <span id="icon-bar-2" class="block h-0.5 w-6 bg-gray-800 transition-all duration-300"></span>
-  <span id="icon-bar-3" class="block h-0.5 w-6 bg-gray-800 transition-all duration-300"></span>
-</button>
-
+    <button id="menu-toggle"
+            class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none">
+      <span id="icon-bar-1" class="block h-0.5 w-6 bg-gray-800 transition-all duration-300"></span>
+      <span id="icon-bar-2" class="block h-0.5 w-6 bg-gray-800 transition-all duration-300"></span>
+      <span id="icon-bar-3" class="block h-0.5 w-6 bg-gray-800 transition-all duration-300"></span>
+    </button>
   </div>
 
   <!-- Mobile Menu -->
-<div id="mobile-menu"
-     class="md:hidden fixed top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg 
-            px-6 py-6 space-y-4 transform transition-all duration-300 ease-in-out 
-            -translate-y-[100%] opacity-0 pointer-events-none z-50">
-  <a href="#services" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Services</a>
-  <a href="#contact" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Contact</a>
-  <a href="#quote" class="block text-center bg-[#9b903f] text-white px-5 py-3 rounded-lg font-semibold shadow hover:bg-[#8a8138]">
-    Get a Quote
-  </a>
-</div>
-
-
+  <div id="mobile-menu"
+       class="md:hidden fixed top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg 
+              px-6 py-6 space-y-4 transform transition-all duration-300 ease-in-out 
+              -translate-y-[100%] opacity-0 pointer-events-none z-50 font-heading">
+    <a href="#services" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Services</a>
+    <a href="#contact" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Contact</a>
+    <a href="#quote" class="block text-center bg-[#9b903f] text-white px-5 py-3 rounded-lg font-semibold shadow hover:bg-[#8a8138]">
+      Get a Quote
+    </a>
+  </div>
 </header>
+
 <!-- Backdrop Overlay -->
 <div id="menu-overlay" class="md:hidden fixed inset-0 hidden z-40"></div>
 
@@ -137,37 +154,52 @@
 </script>
 
 
-<!-- Hero -->
-<section id="hero"
-  class="relative min-h-screen flex items-center justify-center px-6 py-16 bg-cover bg-center"
-  style="background-image: url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80');">
+<!-- Hero Section -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden font-body">
 
+  <!-- Vanta Dots Background -->
+  <div id="vanta-bg" class="absolute inset-0 -z-10"></div>
 
-  <!-- Overlay & Blur -->
-  <div class="absolute inset-0 bg-black/70 backdrop-blur-sm z-0"></div>
+  <!-- Hero Text Content with Backdrop -->
+  <div class="hero-content relative z-10 text-center max-w-2xl bg-black/70 backdrop-blur-md px-6 py-10 rounded-xl shadow-xl">
+    <h1 class="text-4xl sm:text-6xl font-heading font-extrabold tracking-tight leading-tight mb-6 text-white">
+      <span class="block">Premium Gym Equipment</span>
+      <span class="block text-[#9b903f]">Delivery & Assembly</span>
+    </h1>
 
-  <!-- Gradient Accent Shape (Optional Layer) -->
-  <div class="absolute top-[-50px] right-[-50px] w-[200px] h-[200px] bg-[#9b903f] opacity-20 rounded-full blur-3xl z-0"></div>
-
-  <!-- Content -->
-  <div class="hero-content relative z-10 text-center max-w-xl text-white">
-    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4 hero-heading">
-  Premium Gym Installs <br> <span class="text-[#9b903f]">Delivered & Assembled</span>
-</h1>
-
-    <p class="mb-6 text-base sm:text-lg font-light">
-      Serving Edmonton and surrounding areas — expert delivery, assembly, and relocation for home and commercial gyms.
+    <p class="mb-8 text-base sm:text-lg font-light tracking-wide leading-relaxed text-gray-200 font-body">
+      Serving Edmonton and surrounding areas with expert gym equipment delivery, assembly, and relocation — for homes, studios, and commercial facilities.
     </p>
+
     <a href="#contact"
-   class="cta-button inline-block bg-[#9b903f] text-white px-6 py-3 text-lg font-semibold rounded-xl shadow-lg
-          transition-transform duration-300 hover:scale-105 hover:bg-[#8a8138] will-change-transform">
-  Get a Free Quote
-</a>
-
-
-
+       class="cta-button inline-block bg-[#9b903f] text-white px-7 py-3 text-base sm:text-lg font-semibold rounded-xl shadow-lg
+              transition-transform duration-300 hover:scale-105 hover:bg-[#8a8138] will-change-transform font-heading">
+      Get a Free Quote
+    </a>
   </div>
 </section>
+
+<!-- Vanta + Three.js Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.dots.min.js"></script>
+<script>
+  VANTA.DOTS({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.0,
+    color: "#9b9040",           // Dot and line color
+    backgroundColor: "#ffffff", // Background color
+    spacing: 40.00,
+    showLines: true
+  });
+</script>
+
+
+
 
 <!--GSAP Animation -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
