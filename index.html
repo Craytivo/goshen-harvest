@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro Gym Install | Edmonton Gym Equipment Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans scroll-smooth">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="#" class="text-xl font-bold text-gray-800">Pro Gym Install</a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex space-x-8 text-sm font-semibold">
+      <a href="#services" class="hover:text-blue-600">Services</a>
+      <a href="#contact" class="hover:text-blue-600">Contact</a>
+      <a href="#quote" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Get a Quote</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-4 bg-white border-t border-gray-200">
+    <a href="#services" class="block text-sm font-medium text-gray-800 hover:text-blue-600">Services</a>
+    <a href="#contact" class="block text-sm font-medium text-gray-800 hover:text-blue-600">Contact</a>
+    <a href="#quote" class="block bg-black text-white px-4 py-2 rounded font-semibold text-center hover:bg-gray-800">Get a Quote</a>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://yourdomain.com/hero-image.jpg');">
+    <div class="bg-black/60 backdrop-blur-sm p-8 rounded-xl max-w-2xl text-white text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Premium Gym Equipment Delivery & Assembly</h1>
+      <p class="mb-6 text-lg">Serving Edmonton and surrounding areas — commercial and residential services available.</p>
+      <a href="#contact" class="inline-block px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-gray-200 transition">Get a Quote</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 px-6 bg-white">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="p-6 shadow-lg rounded-xl border">
+          <h3 class="text-xl font-semibold mb-2">Delivery</h3>
+          <p>Safe and secure transportation of heavy gym equipment to your location.</p>
+        </div>
+        <div class="p-6 shadow-lg rounded-xl border">
+          <h3 class="text-xl font-semibold mb-2">Assembly</h3>
+          <p>Professional installation of treadmills, racks, bikes, and full gym setups.</p>
+        </div>
+        <div class="p-6 shadow-lg rounded-xl border">
+          <h3 class="text-xl font-semibold mb-2">Relocation</h3>
+          <p>Need to move gear to a new location? We handle disassembly and reinstallation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="py-20 px-6 bg-gray-100">
+    <div class="max-w-2xl mx-auto bg-white p-8 shadow-xl rounded-xl">
+      <h2 class="text-2xl font-bold mb-6 text-center">Request a Free Quote</h2>
+      <form id="contact-form" action="https://formspree.io/f/yourFormID" method="POST" class="space-y-4">
+        <input type="text" name="name" placeholder="Full Name" required class="w-full border p-3 rounded-md">
+        <input type="email" name="email" placeholder="Email" required class="w-full border p-3 rounded-md">
+        <input type="text" name="phone" placeholder="Phone (optional)" class="w-full border p-3 rounded-md">
+        <textarea name="message" placeholder="Tell us about your needs" required class="w-full border p-3 rounded-md h-32"></textarea>
+        <button type="submit" class="w-full bg-black text-white py-3 rounded-md font-semibold hover:bg-gray-800 transition">Send Request</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        alert('Thanks! We’ll be in touch shortly.');
+        form.reset();
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  </script>
+
+</body>
+</html>
