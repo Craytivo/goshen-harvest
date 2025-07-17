@@ -32,28 +32,27 @@
   class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 shadow-sm 
          transition-transform duration-300 ease-in-out font-heading">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    
+
     <!-- Logo -->
     <a href="#" class="flex items-center">
-      <img src="assets\images\goshen-logo.png"
+      <img src="assets/images/goshen-logo.png"
            alt="Goshen Gym Installs Logo"
            class="h-[60px] sm:h-[70px] w-auto scale-110 sm:scale-125 transform origin-left" />
     </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
-  <a href="#services" class="text-gray-800 hover:text-[#9b903f] transition">Services</a>
-  <a href="#portfolio" class="text-gray-800 hover:text-[#9b903f] transition">Portfolio</a>
-  <a href="#testimonials" class="text-gray-800 hover:text-[#9b903f] transition">Testimonials</a>
-  <a href="#contact" class="text-gray-800 hover:text-[#9b903f] transition">Contact</a>
-  <a href="#quote"
-     class="inline-block bg-[#9b903f] text-white px-5 py-2 rounded-lg 
-            font-semibold transform transition-all duration-300 ease-in-out 
-            hover:scale-105 hover:bg-[#8a8138] shadow-md">
-    Get a Quote
-  </a>
-</nav>
-
+      <a href="#services" class="text-gray-800 hover:text-[#9b903f] transition">Services</a>
+      <a href="#portfolio" class="text-gray-800 hover:text-[#9b903f] transition">Portfolio</a>
+      <a href="#testimonials" class="text-gray-800 hover:text-[#9b903f] transition">Testimonials</a>
+      <a href="#contact" class="text-gray-800 hover:text-[#9b903f] transition">Contact</a>
+      <a href="#quote"
+         class="inline-block bg-[#9b903f] text-white px-5 py-2 rounded-lg 
+                font-semibold transform transition-all duration-300 ease-in-out 
+                hover:scale-105 hover:bg-[#8a8138] shadow-md">
+        Get a Quote
+      </a>
+    </nav>
 
     <!-- Mobile Hamburger -->
     <button id="menu-toggle"
@@ -64,20 +63,53 @@
     </button>
   </div>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu"
-     class="md:hidden fixed top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg 
-            px-6 py-6 space-y-4 transform transition-all duration-300 ease-in-out 
-            -translate-y-[100%] opacity-0 pointer-events-none z-50 font-heading">
-  <a href="#services" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Services</a>
-  <a href="#portfolio" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Portfolio</a>
-  <a href="#testimonials" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Testimonials</a>
-  <a href="#contact" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Contact</a>
-  <a href="#contact" class="block text-center bg-[#9b903f] text-white px-5 py-3 rounded-lg font-semibold shadow hover:bg-[#8a8138]">
-    Get a Quote
-  </a>
-</div>
+  <!-- Desktop Feature Banner -->
+  <div class="hidden md:flex justify-center items-center px-6 py-3 bg-[#f7f7f7] text-black text-xs font-semibold border-t border-b border-gray-200 tracking-tight">
+    <div class="flex flex-wrap gap-x-8 gap-y-3 items-center max-w-6xl w-full justify-center">
+
+      <div class="flex items-center gap-2">
+        <i data-lucide="truck" class="w-5 h-5 stroke-[2]"></i>
+        <span>Expert Delivery & Installation</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <i data-lucide="dollar-sign" class="w-5 h-5 stroke-[2]"></i>
+        <span>Commercial Fitness Financing</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <i data-lucide="star" class="w-5 h-5 stroke-[2]"></i>
+        <span>5-Star Customer Reviews</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <i data-lucide="wrench" class="w-5 h-5 stroke-[2]"></i>
+        <span>Province Wide Equipment Servicing</span>
+      </div>
+
+    </div>
+  </div>
+  <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+       class="md:hidden fixed top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg 
+              px-6 py-6 space-y-4 transform transition-all duration-300 ease-in-out 
+              -translate-y-[100%] opacity-0 pointer-events-none z-50 font-heading">
+    <a href="#services" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Services</a>
+    <a href="#portfolio" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Portfolio</a>
+    <a href="#testimonials" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Testimonials</a>
+    <a href="#contact" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Contact</a>
+    <a href="#contact" class="block text-center bg-[#9b903f] text-white px-5 py-3 rounded-lg font-semibold shadow hover:bg-[#8a8138]">
+      Get a Quote
+    </a>
+  </div>
 </header>
+
 
 
 
@@ -169,37 +201,41 @@
 
 
 <!-- Hero Section -->
-<section id="hero" class="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden font-body">
+<section id="hero" class="relative min-h-screen flex items-center justify-center px-6 py-24 overflow-hidden font-body">
 
   <!-- Vanta Dots Background -->
   <div id="vanta-bg" class="absolute inset-0 -z-10"></div>
 
   <!-- Glassmorphic Hero Card -->
-  <div class="hero-content relative z-10 text-center max-w-xl w-full
-              bg-white/10 backdrop-blur-xl rounded-3xl px-6 py-10
-              border border-white/10 shadow-xl ring-1 ring-white/5 
+  <div class="hero-content relative z-10 text-center max-w-2xl w-full
+              bg-white/10 backdrop-blur-xl rounded-3xl px-8 py-12
+              border border-white/10 shadow-xl ring-1 ring-white/5
               transition-all duration-500">
 
     <!-- Heading -->
-    <h1 class="text-3xl sm:text-5xl font-heading font-extrabold tracking-tight leading-tight mb-6 text-black drop-shadow-md">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold tracking-tight leading-tight mb-6 text-black drop-shadow-md">
       <span class="block">Preventative Gym Maintenance</span>
       <span class="block text-[#9b903f] drop-shadow-md">Before the Breakdowns</span>
     </h1>
 
     <!-- Subtext -->
-    <p class="mb-8 text-base sm:text-lg font-light tracking-wide leading-relaxed text-black font-body">
-      We keep your fitness equipment running at its best — reducing downtime, avoiding costly repairs, and extending machine lifespan. Serving Edmonton and surrounding areas with expert maintenance, installation, and relocation services.
+    <p class="text-base sm:text-lg text-black/80 leading-relaxed mb-8">
+      Elevating spaces with precision gym installations — where strength meets design.
+      With equipment costs on the rise, smart operators turn to preventative maintenance.
+      Our nationwide plans with quarterly service visits keep your gym running smoothly,
+      extend equipment lifespan, and protect your investment.
     </p>
 
     <!-- CTA Button -->
     <a href="#contact"
-       class="cta-button inline-block bg-[#9b903f] text-white px-7 py-3 text-base sm:text-lg font-semibold rounded-xl shadow-lg
+       class="inline-block bg-[#9b903f] text-white px-8 py-3 text-base sm:text-lg font-semibold rounded-xl shadow-lg
               transition-transform duration-300 hover:scale-105 hover:bg-[#8a8138] will-change-transform font-heading">
       Request Maintenance Plan
     </a>
 
   </div>
 </section>
+
 
 
 
@@ -751,11 +787,15 @@
 
   <!-- Diagonal Split Background -->
   <div class="absolute inset-0 z-0">
-    <svg class="w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="none">
-      <polygon fill="#ffffff" points="0,0 1440,0 1440,500 0,650" />
-      <polygon fill="#9b903f" points="0,650 1440,500 1440,800 0,800" />
-    </svg>
-  </div>
+  <svg class="w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="none">
+    <!-- Top white background -->
+    <polygon fill="#ffffff" points="0,0 1440,0 1440,400 0,550" />
+    
+    <!-- Bottom gold slant raised higher -->
+    <polygon fill="#9b903f" points="0,550 1440,400 1440,800 0,800" />
+  </svg>
+</div>
+
 
   <!-- Contact Grid -->
   <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 pt-32 pb-24">
@@ -881,31 +921,30 @@
 </form>
   </div>
 
- <!-- Footer -->
-<footer class="relative z-10 backdrop-blur-xl bg-white/10 text-white pt-20 px-6 font-body border-t border-white/10">
+<!-- Footer -->
+<footer class="relative z-10  bg-transparent text-white pt-20 px-6 font-body">
   <div class="max-w-6xl mx-auto pt-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
 
     <!-- Brand + Slogan -->
     <div>
-      <img src="assets\images\goshen-gym-maintenance.png"
+      <img src="assets/images/goshen-logo-top.png"
            alt="Goshen Gym Installs Logo"
-           class="h-[60px] sm:h-[70px] w-auto scale-110 sm:scale-125 transform origin-left" />
-      <p class="text-sm text-black/70">
+           class="h-[60px] sm:h-[20px] w-auto scale-110 sm:scale-125 transform origin-left" />
+      <p class="text-sm text-white mt-4">
         Elevating spaces with precision gym installations — where strength meets design.
       </p>
     </div>
 
     <!-- Navigation -->
     <div>
-  <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
-  <nav class="flex flex-col gap-2 text-sm">
-    <a href="#services" class="hover:text-black transition">Services</a>
-    <a href="#portfolio" class="hover:text-black transition">Portfolio</a>
-    <a href="#testimonials" class="hover:text-black transition">Testimonials</a>
-    <a href="#contact" class="hover:text-black transition">Contact</a>
-  </nav>
-</div>
-
+      <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+      <nav class="flex flex-col gap-2 text-sm">
+        <a href="#services" class="hover:text-black transition">Services</a>
+        <a href="#portfolio" class="hover:text-black transition">Portfolio</a>
+        <a href="#testimonials" class="hover:text-black transition">Testimonials</a>
+        <a href="#contact" class="hover:text-black transition">Contact</a>
+      </nav>
+    </div>
 
     <!-- Contact Info -->
     <div>
@@ -919,10 +958,21 @@
   </div>
 
   <!-- Bottom Note -->
-  <div class="mt-12 border-t border-white/10 pt-6 text-xs text-center text-white/50">
-    &copy; 2025 Goshen Installs. All rights reserved.
+<div class="mt-12 border-t border-white/10 pt-6 text-xs text-center text-white/50">
+  &copy; 2025 Goshen Installs. All rights reserved.
+  <div class="mt-2 space-x-4">
+    <a href="/terms" class="hover:text-white transition">Terms of Service</a>
+    <a href="/privacy" class="hover:text-white transition">Privacy Policy</a>
+    <a href="https://craytivo.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
+      Site built by Craytivo
+    </a>
   </div>
+</div>
+
 </footer>
+
+
+
 
 
 
