@@ -35,22 +35,25 @@
     
     <!-- Logo -->
     <a href="#" class="flex items-center">
-      <img src="assets/images/goshen-logo.png"
+      <img src="assets\images\goshen-gym-maintenance.png"
            alt="Goshen Gym Installs Logo"
            class="h-[60px] sm:h-[70px] w-auto scale-110 sm:scale-125 transform origin-left" />
     </a>
 
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
-      <a href="#services" class="text-gray-800 hover:text-[#9b903f] transition">Services</a>
-      <a href="#contact" class="text-gray-800 hover:text-[#9b903f] transition">Contact</a>
-      <a href="#quote"
-         class="inline-block bg-[#9b903f] text-white px-5 py-2 rounded-lg 
-                font-semibold transform transition-all duration-300 ease-in-out 
-                hover:scale-105 hover:bg-[#8a8138] shadow-md">
-        Get a Quote
-      </a>
-    </nav>
+  <a href="#services" class="text-gray-800 hover:text-[#9b903f] transition">Services</a>
+  <a href="#portfolio" class="text-gray-800 hover:text-[#9b903f] transition">Portfolio</a>
+  <a href="#testimonials" class="text-gray-800 hover:text-[#9b903f] transition">Testimonials</a>
+  <a href="#contact" class="text-gray-800 hover:text-[#9b903f] transition">Contact</a>
+  <a href="#quote"
+     class="inline-block bg-[#9b903f] text-white px-5 py-2 rounded-lg 
+            font-semibold transform transition-all duration-300 ease-in-out 
+            hover:scale-105 hover:bg-[#8a8138] shadow-md">
+    Get a Quote
+  </a>
+</nav>
+
 
     <!-- Mobile Hamburger -->
     <button id="menu-toggle"
@@ -61,18 +64,22 @@
     </button>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu"
-       class="md:hidden fixed top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg 
-              px-6 py-6 space-y-4 transform transition-all duration-300 ease-in-out 
-              -translate-y-[100%] opacity-0 pointer-events-none z-50 font-heading">
-    <a href="#services" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Services</a>
-    <a href="#contact" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Contact</a>
-    <a href="#quote" class="block text-center bg-[#9b903f] text-white px-5 py-3 rounded-lg font-semibold shadow hover:bg-[#8a8138]">
-      Get a Quote
-    </a>
-  </div>
+<!-- Mobile Menu -->
+<div id="mobile-menu"
+     class="md:hidden fixed top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg 
+            px-6 py-6 space-y-4 transform transition-all duration-300 ease-in-out 
+            -translate-y-[100%] opacity-0 pointer-events-none z-50 font-heading">
+  <a href="#services" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Services</a>
+  <a href="#portfolio" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Portfolio</a>
+  <a href="#testimonials" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Testimonials</a>
+  <a href="#contact" class="block text-lg font-medium text-gray-800 hover:text-[#9b903f]">Contact</a>
+  <a href="#contact" class="block text-center bg-[#9b903f] text-white px-5 py-3 rounded-lg font-semibold shadow hover:bg-[#8a8138]">
+    Get a Quote
+  </a>
+</div>
 </header>
+
+
 
 <!-- Backdrop Overlay -->
 <div id="menu-overlay" class="md:hidden fixed inset-0 hidden z-40"></div>
@@ -99,33 +106,44 @@
   });
 </script>
 
+<!-- JS to auto-close mobile menu -->
+<script>
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.add('-translate-y-[100%]', 'opacity-0', 'pointer-events-none');
+      menu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    });
+  });
+</script>
 
- <!-- Mobile Menu Toggle -->
 <script>
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('mobile-menu');
   const overlay = document.getElementById('menu-overlay');
 
-  // Animated icon bars
   const bar1 = document.getElementById('icon-bar-1');
   const bar2 = document.getElementById('icon-bar-2');
   const bar3 = document.getElementById('icon-bar-3');
 
+  function closeMobileMenu() {
+    menu.classList.add('-translate-y-[100%]', 'opacity-0', 'pointer-events-none');
+    menu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+
+    overlay.classList.add('hidden');
+    overlay.classList.remove('backdrop-blur-sm', 'bg-black/30');
+
+    // Reset burger icon
+    bar1.classList.remove('rotate-45', 'translate-y-1.5');
+    bar2.classList.remove('opacity-0');
+    bar3.classList.remove('-rotate-45', '-translate-y-1.5');
+  }
+
   toggle.addEventListener('click', () => {
     const isOpen = menu.classList.contains('translate-y-0');
 
-    // Toggle menu visibility
     if (isOpen) {
-      menu.classList.add('-translate-y-[100%]', 'opacity-0', 'pointer-events-none');
-      menu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
-
-      overlay.classList.add('hidden');
-      overlay.classList.remove('backdrop-blur-sm', 'bg-black/30');
-
-      // Icon to burger
-      bar1.classList.remove('rotate-45', 'translate-y-1.5');
-      bar2.classList.remove('opacity-0');
-      bar3.classList.remove('-rotate-45', '-translate-y-1.5');
+      closeMobileMenu();
     } else {
       menu.classList.remove('-translate-y-[100%]', 'opacity-0', 'pointer-events-none');
       menu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
@@ -133,27 +151,21 @@
       overlay.classList.remove('hidden');
       overlay.classList.add('backdrop-blur-sm', 'bg-black/30');
 
-      // Icon to X
+      // Animate icon to X
       bar1.classList.add('rotate-45', 'translate-y-1.5');
       bar2.classList.add('opacity-0');
       bar3.classList.add('-rotate-45', '-translate-y-1.5');
     }
   });
 
-  // Close menu if backdrop is clicked
-  overlay.addEventListener('click', () => {
-    menu.classList.add('-translate-y-[100%]', 'opacity-0', 'pointer-events-none');
-    menu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+  overlay.addEventListener('click', closeMobileMenu);
 
-    overlay.classList.add('hidden');
-    overlay.classList.remove('backdrop-blur-sm', 'bg-black/30');
-
-    // Reset icon to burger
-    bar1.classList.remove('rotate-45', 'translate-y-1.5');
-    bar2.classList.remove('opacity-0');
-    bar3.classList.remove('-rotate-45', '-translate-y-1.5');
+  // NEW: Close menu when clicking any menu item link
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
   });
 </script>
+
 
 
 <!-- Hero Section -->
@@ -373,48 +385,640 @@
   </div>
 
 </div>
-
-
 </section>
 
+<!-- Testimonials Section -->
+<section id="testimonials" class="relative bg-[#fdfcf7] py-24 px-6 font-body text-gray-800 overflow-hidden">
 
+  <div class="max-w-6xl mx-auto text-center mb-16">
+    <h2 class="text-4xl sm:text-5xl font-heading font-bold mb-4" data-aos="fade-up">What Our Clients Say</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto text-lg font-light" data-aos="fade-up" data-aos-delay="100">
+      Trusted by homeowners, gym owners, and personal trainers across Edmonton and beyond.
+    </p>
+  </div>
 
+  <!-- Testimonial Grid / Carousel -->
+  <div class="relative z-10">
+    <!-- Desktop Grid -->
+    <div class="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Card 1 -->
+<div class="testimonial-card" data-aos="fade-up">
+  <p class="text-lg font-medium leading-relaxed text-gray-800 mb-6">
+    "Goshen keeps our equipment in top shape year-round. We’ve cut downtime by over 80% thanks to their preventative maintenance service."
+  </p>
+  <div class="flex items-center gap-4">
+    <img src="https://i.pravatar.cc/100?img=14" alt="Client" class="w-12 h-12 rounded-full object-cover">
+    <div>
+      <h4 class="font-semibold text-gray-900">Sarah J.</h4>
+      <span class="text-sm text-gray-500">Gym Owner</span>
+    </div>
+  </div>
+</div>
 
+<!-- Card 2 -->
+<div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+  <p class="text-lg font-medium leading-relaxed text-gray-800 mb-6">
+    "We had several machines with recurring issues. Goshen’s team diagnosed and fixed them fast — now everything runs smooth."
+  </p>
+  <div class="flex items-center gap-4">
+    <img src="https://i.pravatar.cc/100?img=22" alt="Client" class="w-12 h-12 rounded-full object-cover">
+    <div>
+      <h4 class="font-semibold text-gray-900">Tyrell M.</h4>
+      <span class="text-sm text-gray-500">Fitness Manager</span>
+    </div>
+  </div>
+</div>
 
+<!-- Card 3 -->
+<div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+  <p class="text-lg font-medium leading-relaxed text-gray-800 mb-6">
+    "They do our monthly maintenance — belts, cables, lubrication, even touch-ups. It’s like having an in-house tech team!"
+  </p>
+  <div class="flex items-center gap-4">
+    <img src="https://i.pravatar.cc/100?img=37" alt="Client" class="w-12 h-12 rounded-full object-cover">
+    <div>
+      <h4 class="font-semibold text-gray-900">Lena P.</h4>
+      <span class="text-sm text-gray-500">Franchise Owner</span>
+    </div>
+  </div>
+</div>
 
-<!-- Contact CTA -->
-<section id="contact" class="py-20 px-6 bg-gray-100 font-body">
-  <div class="max-w-2xl mx-auto bg-white p-8 shadow-xl rounded-xl border border-gray-200">
-    <h2 class="text-2xl sm:text-3xl font-heading font-bold mb-6 text-center text-gray-900">Request a Free Quote</h2>
-    <form id="contact-form" action="https://formspree.io/f/yourFormID" method="POST" class="space-y-4">
-      <input type="text" name="name" placeholder="Full Name" required class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9b903f]">
-      <input type="email" name="email" placeholder="Email" required class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9b903f]">
-      <input type="text" name="phone" placeholder="Phone (optional)" class="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9b903f]">
-      <textarea name="message" placeholder="Tell us about your needs" required class="w-full border border-gray-300 p-3 rounded-md h-32 focus:outline-none focus:ring-2 focus:ring-[#9b903f]"></textarea>
-      <button type="submit" class="w-full bg-[#9b903f] text-white py-3 rounded-md font-heading font-semibold hover:bg-[#8a8138] transition">Send Request</button>
-    </form>
+    </div>
+
+    <!-- Mobile Carousel (Swiper.js) -->
+    <div class="md:hidden">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide testimonial-card">
+            <p class="text-lg font-medium leading-relaxed text-gray-800 mb-6">
+              "They delivered and set up my entire home gym within hours. Professional, efficient, and extremely careful with the equipment!"
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="https://i.pravatar.cc/100?img=12" alt="Client" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <h4 class="font-semibold text-gray-900">Jason T.</h4>
+                <span class="text-sm text-gray-500">Home Gym Client</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <p class="text-lg font-medium leading-relaxed text-gray-800 mb-6">
+              "We relocated all our commercial gear with Goshen. No scratches, no stress. Highly recommended for businesses!"
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="https://i.pravatar.cc/100?img=45" alt="Client" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <h4 class="font-semibold text-gray-900">Amanda R.</h4>
+                <span class="text-sm text-gray-500">Studio Owner</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide testimonial-card">
+            <p class="text-lg font-medium leading-relaxed text-gray-800 mb-6">
+              "I’m a trainer and use them for all my clients’ installs. Every time, they’re on time, polite, and do the job right."
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="https://i.pravatar.cc/100?img=32" alt="Client" class="w-12 h-12 rounded-full object-cover">
+              <div>
+                <h4 class="font-semibold text-gray-900">Marcus L.</h4>
+                <span class="text-sm text-gray-500">Personal Trainer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative Shapes -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-[#9b903f]/10 rounded-full -z-10 blur-2xl"></div>
+  <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#9b903f]/20 rounded-full -z-10 blur-3xl"></div>
+
+  <!-- Call to Action -->
+  <div class="mt-20 text-center" data-aos="fade-up">
+    <h3 class="text-2xl sm:text-3xl font-heading font-semibold text-gray-900 mb-4">Ready to transform your space?</h3>
+    <a href="#contact" class="inline-block bg-[#9b903f] text-white font-semibold py-3 px-6 rounded-md hover:bg-[#8a8138] transition">
+      Get a Free Quote
+    </a>
   </div>
 </section>
 
+<!-- Styles for testimonial cards -->
+<style>
+  .testimonial-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    padding: 2rem;
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+  }
+  .testimonial-card:hover {
+    transform: scale(1.05);
+  }
+</style>
 
+<!-- Swiper.js CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.swiper', {
+    loop: true,
+    pagination: { el: '.swiper-pagination', clickable: true },
+    slidesPerView: 1,
+    spaceBetween: 24,
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/keen-slider@6.8.5/keen-slider.min.js"></script>
+<script>
+  new KeenSlider("#portfolioSlider", {
+    loop: true,
+    slides: { perView: 1.1, spacing: 20 },
+    mode: "free-snap"
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+<script>
+  new Splide("#testimonialCube", {
+    type: 'loop',
+    perPage: 1,
+    autoplay: true,
+    interval: 4000,
+    classes: {
+      arrows: 'hidden',
+      pagination: 'splide__pagination flex justify-center gap-2 mt-4',
+    }
+  }).mount();
+</script>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="relative bg-white py-24 px-6 font-body">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Heading -->
+    <div class="mb-14 text-center" data-aos="fade-up">
+      <h2 class="text-4xl font-heading font-extrabold text-gray-900 mb-4">Our Installations</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        A look at some of the commercial and home gym setups we’ve built — expertly installed and styled for every space.
+      </p>
+    </div>
+
+    <!-- Mobile Swiper Carousel -->
+    <div class="md:hidden" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper portfolioSwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+              <img src="assets\images\PHOTO-2023-08-25-08-49-23.jpg" alt="Gym Installation"
+                   class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white text-lg font-semibold">Modern Fitness Suite</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+              <img src="assets\images\PHOTO-2023-08-25-20-25-57.jpg" alt="Gym Equipment"
+                   class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white text-lg font-semibold">Luxury Strength Room</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+              <img src="assets\images\PHOTO-2023-08-27-20-42-55 (1).jpg" alt="Garage Gym"
+                   class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white text-lg font-semibold">Garage Gym Install</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+              <img src="assets\images\PHOTO-2023-08-27-20-42-55 (2).jpg" alt="Garage Gym"
+                   class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white text-lg font-semibold">Garage Gym Install</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+              <img src="assets\images\PHOTO-2023-08-27-20-42-55.jpg" alt="Garage Gym"
+                   class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white text-lg font-semibold">Garage Gym Install</span>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 6 -->
+          <div class="swiper-slide">
+            <div class="relative group overflow-hidden rounded-2xl shadow-xl">
+              <img src="assets\images\PHOTO-2023-08-27-20-42-56.jpg" alt="Garage Gym"
+                   class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-white text-lg font-semibold">Garage Gym Install</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+    </div>
+
+    <!-- Desktop Horizontal Scroll Grid -->
+<div class="hidden md:block overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-thin scrollbar-thumb-[#9b903f] scrollbar-track-gray-200 scrollbar-corner-[#f1e8a4] hover:scrollbar-thumb-[#8a8138]"
+     data-aos="fade-up" data-aos-delay="150">
+  <div class="flex gap-6 w-[3000px] pr-6">
+
+    <!-- Portfolio Card (repeatable) -->
+    <div class="w-[30%] min-w-[300px] snap-start group relative overflow-hidden rounded-2xl shadow-xl">
+      <img src="assets/images/PHOTO-2023-08-25-08-49-23.jpg" alt="Executive Facility"
+           class="h-[420px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+        <span class="text-white font-semibold text-lg">Executive Facility</span>
+      </div>
+    </div>
+
+    <!-- Repeat the following card for each image -->
+    <div class="w-[30%] min-w-[300px] snap-start group relative overflow-hidden rounded-2xl shadow-xl">
+      <img src="assets/images/PHOTO-2023-08-25-20-25-57.jpg" alt="Designer Gym Space"
+           class="h-[420px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+        <span class="text-white font-semibold text-lg">Designer Gym Space</span>
+      </div>
+    </div>
+
+    <div class="w-[30%] min-w-[300px] snap-start group relative overflow-hidden rounded-2xl shadow-xl">
+      <img src="assets/images/PHOTO-2023-08-27-20-42-55 (1).jpg" alt="Compact Home Gym"
+           class="h-[420px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+        <span class="text-white font-semibold text-lg">Compact Home Gym</span>
+      </div>
+    </div>
+
+    <div class="w-[30%] min-w-[300px] snap-start group relative overflow-hidden rounded-2xl shadow-xl">
+      <img src="assets/images/PHOTO-2023-08-27-20-42-55 (2).jpg" alt="Compact Home Gym"
+           class="h-[420px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+        <span class="text-white font-semibold text-lg">Compact Home Gym</span>
+      </div>
+    </div>
+
+    <div class="w-[30%] min-w-[300px] snap-start group relative overflow-hidden rounded-2xl shadow-xl">
+      <img src="assets/images/PHOTO-2023-08-27-20-42-55.jpg" alt="Compact Home Gym"
+           class="h-[420px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+        <span class="text-white font-semibold text-lg">Compact Home Gym</span>
+      </div>
+    </div>
+
+    <div class="w-[30%] min-w-[300px] snap-start group relative overflow-hidden rounded-2xl shadow-xl">
+      <img src="assets/images/PHOTO-2023-08-27-20-42-56.jpg" alt="Compact Home Gym"
+           class="h-[420px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+        <span class="text-white font-semibold text-lg">Compact Home Gym</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    <!-- CTA -->
+<div class="mt-24 text-center px-6" data-aos="fade-up" data-aos-delay="200">
+  <div class="inline-block bg-[#9b903f]/10 px-8 py-10 rounded-3xl shadow-xl border border-[#9b903f]/20 max-w-xl mx-auto">
+    
+    <!-- Title -->
+    <h3 class="text-3xl font-heading font-bold text-gray-900 mb-2">
+      Ready to Build Your Dream Gym?
+    </h3>
+
+    <!-- Subtext -->
+    <p class="text-gray-700 mb-6 text-base sm:text-lg">
+      Let’s bring your vision to life — our team is just a message away.
+    </p>
+
+    <!-- Button -->
+    <a href="#contact"
+       class="glow-cta inline-flex items-center gap-3 px-8 py-3 bg-[#9b903f] text-white font-heading font-semibold text-lg rounded-xl shadow-lg hover:bg-[#8a8138] hover:shadow-xl transition-all duration-300 group">
+      <span class="relative flex items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 transition-transform duration-300 group-hover:translate-x-1"
+             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+        Book Your Install
+      </span>
+    </a>
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- Swiper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const res = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-      if (res.ok) {
-        alert('Thanks! We’ll be in touch shortly.');
-        form.reset();
-      } else {
-        alert('Something went wrong. Please try again.');
+    new Swiper(".portfolioSwiper", {
+      slidesPerView: 1.1,
+      spaceBetween: 20,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       }
     });
   </script>
+</section>
+
+
+
+<!-- Contact + Footer Section -->
+<section id="contact" class="relative font-body overflow-hidden">
+
+  <!-- Diagonal Split Background -->
+  <div class="absolute inset-0 z-0">
+    <svg class="w-full h-full" viewBox="0 0 1440 800" preserveAspectRatio="none">
+      <polygon fill="#ffffff" points="0,0 1440,0 1440,500 0,650" />
+      <polygon fill="#9b903f" points="0,650 1440,500 1440,800 0,800" />
+    </svg>
+  </div>
+
+  <!-- Contact Grid -->
+  <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 px-6 pt-32 pb-24">
+
+    <!-- Contact Info -->
+    <div class="backdrop-blur-xl bg-white/50 border border-white/20 shadow-xl rounded-3xl p-10 text-gray-900"
+         data-aos="fade-right">
+      <h2 class="text-3xl font-heading font-bold mb-6">Get in Touch</h2>
+      <p class="text-gray-700 text-base leading-relaxed mb-8">
+        Have a question? Need a quote? Our team is ready to help — fast, friendly, and reliable service is just a message away.
+      </p>
+      <ul class="space-y-6 text-sm text-gray-800">
+
+        <!-- Email -->
+        <li class="flex items-center gap-4">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#9b903f]/15 text-[#9b903f]">
+            <!-- Mail Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16v16H4z" stroke="none"/>
+              <path d="M4 4l8 8 8-8" />
+            </svg>
+          </div>
+          <span><strong>Email:</strong> goshen.harvest.inc@gmail.com</span>
+        </li>
+
+        <!-- Phone -->
+        <li class="flex items-center gap-4">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#9b903f]/15 text-[#9b903f]">
+            <!-- Phone Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M2 4l5 2 3.5 7-2 2c1.5 2 3.5 4 6 5l2-2 7 3.5 2-5c-4-9-11-16-20-20l-5 2z" />
+            </svg>
+          </div>
+          <span><strong>Call/Text:</strong> +1 (780) 902-2041</span>
+        </li>
+
+        <!-- Location -->
+        <li class="flex items-center gap-4">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#9b903f]/15 text-[#9b903f]">
+            <!-- Location Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C8.1 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3.1-7-7-7z" />
+              <circle cx="12" cy="9" r="2.5" />
+            </svg>
+          </div>
+          <span><strong>Service Area:</strong> Edmonton & Surrounding Communities</span>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- Contact Form -->
+     <!-- Toast Notification -->
+<div id="form-toast"
+     class="fixed top-6 right-6 z-50 hidden px-5 py-4 rounded-lg shadow-lg max-w-sm text-white transition-all duration-500">
+  <div class="flex items-center gap-3">
+    <span id="toast-icon">✅</span>
+    <p id="toast-message" class="text-sm font-medium"></p>
+  </div>
+</div>
+
+<form id="contact-form" action="https://formspree.io/f/mkgzneel" method="POST"
+      class="backdrop-blur-xl bg-white/50 border border-white/20 shadow-xl rounded-3xl p-10 space-y-8"
+      data-aos="fade-left" novalidate>
+
+  <h2 class="text-3xl font-heading font-bold text-gray-900">Say Something</h2>
+
+  <!-- Success/Error Messages -->
+  <div id="form-alert" class="hidden text-sm font-medium rounded-lg px-4 py-3"></div>
+
+  <!-- Honeypot (invisible to users) -->
+  <input type="text" name="_gotcha" style="display:none">
+
+  <!-- Name -->
+  <div class="flex items-center gap-4">
+    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#9b903f]/15 text-[#9b903f]">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+        <path d="M4 20v-1c0-2.21 3.58-4 8-4s8 1.79 8 4v1" />
+      </svg>
+    </div>
+    <input type="text" name="name" placeholder="Your Name" required minlength="2"
+           class="w-full bg-white/60 placeholder-gray-600 text-gray-900 border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9b903f]" />
+  </div>
+
+  <!-- Email -->
+  <div class="flex items-center gap-4">
+    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#9b903f]/15 text-[#9b903f]">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16v16H4z" stroke="none"/>
+        <path d="M4 4l8 8 8-8" />
+      </svg>
+    </div>
+    <input type="email" name="email" placeholder="Your Email" required
+           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+           class="w-full bg-white/60 placeholder-gray-600 text-gray-900 border border-gray-300 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-[#9b903f]" />
+  </div>
+
+  <!-- Message -->
+  <div class="flex items-start gap-4">
+    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-[#9b903f]/15 text-[#9b903f] mt-1">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+      </svg>
+    </div>
+    <textarea name="message" rows="4" placeholder="Message" required minlength="10"
+              class="w-full bg-white/60 placeholder-gray-600 text-gray-900 border border-gray-300 px-4 py-3 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-[#9b903f]"></textarea>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit"
+          class="bg-[#9b903f] text-white font-heading font-semibold py-3 px-6 rounded-md hover:bg-[#8a8138] transition-all duration-300 shadow-lg">
+    Send Message
+  </button>
+  <!-- Success Checkmark -->
+<div id="checkmark-success" class="hidden flex justify-center mt-4">
+  <svg class="w-12 h-12 text-green-500 animate-bounce" fill="none" stroke="currentColor" stroke-width="2"
+       viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+  </svg>
+</div>
+
+</form>
+  </div>
+
+ <!-- Footer -->
+<footer class="relative z-10 backdrop-blur-xl bg-white/10 text-white pt-20 px-6 font-body border-t border-white/10">
+  <div class="max-w-6xl mx-auto pt-12 grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+
+    <!-- Brand + Slogan -->
+    <div>
+      <img src="assets\images\goshen-gym-maintenance.png"
+           alt="Goshen Gym Installs Logo"
+           class="h-[60px] sm:h-[70px] w-auto scale-110 sm:scale-125 transform origin-left" />
+      <p class="text-sm text-white/70">
+        Elevating spaces with precision gym installations — where strength meets design.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div>
+  <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+  <nav class="flex flex-col gap-2 text-sm">
+    <a href="#services" class="hover:text-black transition">Services</a>
+    <a href="#portfolio" class="hover:text-black transition">Portfolio</a>
+    <a href="#testimonials" class="hover:text-black transition">Testimonials</a>
+    <a href="#contact" class="hover:text-black transition">Contact</a>
+  </nav>
+</div>
+
+
+    <!-- Contact Info -->
+    <div>
+      <h4 class="font-semibold text-lg mb-4">Get In Touch</h4>
+      <ul class="text-sm text-white/70 space-y-1">
+        <li>Email: <a href="mailto:goshen.harvest.inc@gmail.com" class="hover:text-white">goshen.harvest.inc@gmail.com</a></li>
+        <li>Call/Text: <a href="tel:+17809022041" class="hover:text-white">+1 (780) 902-2041</a></li>
+        <li>Edmonton, Alberta</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom Note -->
+  <div class="mt-12 border-t border-white/10 pt-6 text-xs text-center text-white/50">
+    &copy; 2025 Goshen Installs. All rights reserved.
+  </div>
+</footer>
+
+
+
+</section>
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+    const toast = document.getElementById("form-toast");
+    const toastMsg = document.getElementById("toast-message");
+    const toastIcon = document.getElementById("toast-icon");
+    const checkmark = document.getElementById("checkmark-success");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      // Clear existing states
+      clearErrors();
+      checkmark.classList.add("hidden");
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+      const honeypot = form._gotcha.value;
+
+      if (honeypot) return;
+
+      let hasError = false;
+
+      if (name.length < 2) {
+        highlightError("name");
+        showToast("Please enter your full name.", "❌", "red");
+        hasError = true;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        highlightError("email");
+        showToast("Please enter a valid email address.", "❌", "red");
+        hasError = true;
+      } else if (message.length < 10) {
+        highlightError("message");
+        showToast("Message must be at least 10 characters.", "❌", "red");
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { Accept: "application/json" }
+        });
+
+        if (response.ok) {
+          showToast("Message sent successfully!", "✅", "green");
+          form.reset();
+          checkmark.classList.remove("hidden");
+        } else {
+          showToast("Something went wrong. Please try again.", "⚠️", "red");
+        }
+      } catch (err) {
+        showToast("Network error. Please check your connection.", "⚠️", "red");
+      }
+    });
+
+    function showToast(message, icon, color) {
+      toastMsg.textContent = message;
+      toastIcon.textContent = icon;
+      toast.className =
+        `fixed top-6 right-6 z-50 flex items-center gap-3 px-5 py-4 rounded-lg shadow-lg max-w-sm text-white transition-all duration-500 bg-${color}-600`;
+      toast.classList.remove("hidden");
+
+      setTimeout(() => {
+        toast.classList.add("hidden");
+      }, 4000);
+    }
+
+    function highlightError(fieldName) {
+      const field = form.elements[fieldName];
+      field.classList.add("border-red-500", "ring-2", "ring-red-300");
+    }
+
+    function clearErrors() {
+      const inputs = form.querySelectorAll(".form-input");
+      inputs.forEach(input =>
+        input.classList.remove("border-red-500", "ring-2", "ring-red-300")
+      );
+    }
+  });
+</script>
+
+
 
 </body>
 </html>
