@@ -34,26 +34,26 @@
 
 <!-- Header -->
 <header id="site-header"
-  class="fixed top-0 left-0 w-full z-50 bg-[#111827]/95 backdrop-blur border-b border-gray-800 shadow-sm 
+  class="fixed top-0 left-0 w-full z-50 bg-gray-900/95 backdrop-blur border-b border-gray-800 
          transition-transform duration-300 ease-in-out font-heading text-white">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+  <div class="max-w-6xl mx-auto px-8 py-6 flex justify-between items-center">
 
     <!-- Logo -->
     <a href="#" class="flex items-center">
       <img src="assets\images\goshen-logo.png"
            alt="Goshen Gym Installs Logo"
-           class="h-[60px] sm:h-[70px] w-auto scale-110 sm:scale-125 transform origin-left" />
+           class="h-12 w-auto" />
     </a>
 
 <!-- Desktop Nav -->
-<nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
-  <a href="#services" class="text-white hover:text-[#f5da63] transition">Services</a>
-  <a href="#portfolio" class="text-white hover:text-[#f5da63] transition">Portfolio</a>
-  <a href="#testimonials" class="text-white hover:text-[#f5da63] transition">Testimonials</a>
-  <a href="#contact" class="text-white hover:text-[#f5da63] transition">Contact</a>
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+  <a href="#services" class="text-gray-300 hover:text-[#9b903f] transition-colors">Services</a>
+  <a href="#portfolio" class="text-gray-300 hover:text-[#9b903f] transition-colors">Portfolio</a>
+  <a href="#testimonials" class="text-gray-300 hover:text-[#9b903f] transition-colors">Testimonials</a>
+  <a href="#contact" class="text-gray-300 hover:text-[#9b903f] transition-colors">Contact</a>
   <a href="#contact"
-     class="inline-block bg-[#9b903f] text-white px-6 py-2 font-heading font-semibold text-sm uppercase tracking-wide 
-            hover:bg-[#8a8138] transition duration-300 shadow-sm">
+     class="inline-block bg-[#9b903f] text-white px-6 py-3 font-medium text-sm 
+            hover:bg-[#8a8138] transition-colors">
     Get a Quote
   </a>
 </nav>
@@ -70,14 +70,14 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu"
-       class="md:hidden fixed top-16 left-0 w-full bg-[#111827] border-t border-gray-700 shadow-lg 
-              px-6 py-6 space-y-4 transform transition-all duration-300 ease-in-out 
+       class="md:hidden fixed top-16 left-0 w-full bg-gray-900 border-t border-gray-800 shadow-lg 
+              px-8 py-8 space-y-6 transform transition-all duration-300 ease-in-out 
               -translate-y-[100%] opacity-0 pointer-events-none z-50 font-heading text-white">
-    <a href="#services" class="block text-lg font-medium hover:text-[#f5da63]">Services</a>
-    <a href="#portfolio" class="block text-lg font-medium hover:text-[#f5da63]">Portfolio</a>
-    <a href="#testimonials" class="block text-lg font-medium hover:text-[#f5da63]">Testimonials</a>
-    <a href="#contact" class="block text-lg font-medium hover:text-[#f5da63]">Contact</a>
-    <a href="#contact" class="block text-center bg-[#9b903f] text-white px-5 py-3 rounded-md font-semibold shadow hover:bg-[#8a8138]">
+    <a href="#services" class="block text-lg font-medium hover:text-[#9b903f] transition-colors">Services</a>
+    <a href="#portfolio" class="block text-lg font-medium hover:text-[#9b903f] transition-colors">Portfolio</a>
+    <a href="#testimonials" class="block text-lg font-medium hover:text-[#9b903f] transition-colors">Testimonials</a>
+    <a href="#contact" class="block text-lg font-medium hover:text-[#9b903f] transition-colors">Contact</a>
+    <a href="#contact" class="block text-center bg-[#9b903f] text-white px-6 py-3 font-medium hover:bg-[#8a8138] transition-colors">
       Get a Quote
     </a>
   </div>
@@ -177,244 +177,128 @@
 
 
 
-<!-- Hero Section (Updated Premium Style) -->
-<section id="hero" class="bg-white pt-[160px] pb-32 px-6 font-body text-center text-gray-900 scroll-mt-[120px]">
-  <div class="max-w-5xl mx-auto mb-16">
-    <h1 class="text-4xl sm:text-5xl font-heading font-extrabold mb-4">Upgrade Your Gym Experience</h1>
-    <h2 class="text-lg sm:text-xl font-semibold text-[#9b903f] uppercase tracking-wide mb-4">
-      Build your dream gym with Goshen Installs
-    </h2>
-    <p class="text-gray-700 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-      We make your ideal gym setup simple — with expert delivery, precision installs, and preventative maintenance that keeps you running strong. Let us handle the heavy lifting.
+<!-- Hero Section -->
+<section id="hero" class="bg-white pt-32 pb-24 px-8 font-body text-center text-gray-900 scroll-mt-[120px]">
+  <div class="max-w-4xl mx-auto mb-20">
+    <h1 class="text-5xl sm:text-6xl font-heading font-bold mb-8 text-gray-900">Upgrade Your Gym Experience</h1>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+      We make your ideal gym setup simple — with expert delivery, precision installs, and preventative maintenance that keeps you running strong.
     </p>
   </div>
 
   <!-- Service Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
     
-    <!-- CARD TEMPLATE -->
-    <div class="relative h-[420px] overflow-hidden bg-gray-900 rounded-sm shadow-md group">
-      <img src="assets/images/image18.webp" alt="Maintenance"
-        class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative z-10 h-full flex flex-col justify-end p-6 text-left text-white">
-        <h3 class="text-xl font-heading font-bold mb-2">Preventative Maintenance</h3>
-        <p class="text-sm text-white/90 mb-4">Nationwide service, done right.</p>
-        <a href="#contact"
-          class="inline-block border border-white px-4 py-2 text-sm font-semibold uppercase tracking-wide hover:bg-white hover:text-black transition duration-300">
-          Learn More
-        </a>
-      </div>
+    <div class="bg-white border border-gray-200 p-8 text-center hover:border-[#9b903f] transition-colors">
+      <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Preventative Maintenance</h3>
+      <p class="text-gray-600 mb-6">Nationwide service, done right.</p>
+      <a href="#contact" class="text-[#9b903f] font-medium hover:underline">
+        Learn More →
+      </a>
     </div>
 
-    <div class="relative h-[420px] overflow-hidden bg-gray-900 rounded-sm shadow-md group">
-      <img src="assets/images/image1.webp" alt="Design"
-        class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative z-10 h-full flex flex-col justify-end p-6 text-left text-white">
-        <h3 class="text-xl font-heading font-bold mb-2">Commercial Gym Design</h3>
-        <p class="text-sm text-white/90 mb-4">Smart layouts, efficient installs.</p>
-        <a href="#contact"
-          class="inline-block border border-white px-4 py-2 text-sm font-semibold uppercase tracking-wide hover:bg-white hover:text-black transition duration-300">
-          Start Project
-        </a>
-      </div>
+    <div class="bg-white border border-gray-200 p-8 text-center hover:border-[#9b903f] transition-colors">
+      <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Commercial Gym Design</h3>
+      <p class="text-gray-600 mb-6">Smart layouts, efficient installs.</p>
+      <a href="#contact" class="text-[#9b903f] font-medium hover:underline">
+        Start Project →
+      </a>
     </div>
 
-    <div class="relative h-[420px] overflow-hidden bg-gray-900 rounded-sm shadow-md group">
-      <img src="assets/images/image25.webp" alt="Brands"
-        class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative z-10 h-full flex flex-col justify-end p-6 text-left text-white">
-        <h3 class="text-xl font-heading font-bold mb-2">World-Renowned Brands</h3>
-        <p class="text-sm text-white/90 mb-4">Upgrade with the best equipment at the best prices.</p>
-        <a href="#contact"
-          class="inline-block border border-white px-4 py-2 text-sm font-semibold uppercase tracking-wide hover:bg-white hover:text-black transition duration-300">
-          Browse Catalog
-        </a>
-      </div>
+    <div class="bg-white border border-gray-200 p-8 text-center hover:border-[#9b903f] transition-colors">
+      <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">World-Renowned Brands</h3>
+      <p class="text-gray-600 mb-6">Upgrade with the best equipment at the best prices.</p>
+      <a href="#contact" class="text-[#9b903f] font-medium hover:underline">
+        Browse Catalog →
+      </a>
     </div>
 
-    <div class="relative h-[420px] overflow-hidden bg-gray-900 rounded-sm shadow-md group">
-      <img src="assets/images/image34.webp" alt="White-Glove Service"
-        class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative z-10 h-full flex flex-col justify-end p-6 text-left text-white">
-        <h3 class="text-xl font-heading font-bold mb-2">White-Glove Service</h3>
-        <p class="text-sm text-white/90 mb-4">Professional delivery and expert setup.</p>
-        <a href="#contact"
-          class="inline-block border border-white px-4 py-2 text-sm font-semibold uppercase tracking-wide hover:bg-white hover:text-black transition duration-300">
-          Get Your Rate
-        </a>
-      </div>
+    <div class="bg-white border border-gray-200 p-8 text-center hover:border-[#9b903f] transition-colors">
+      <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">White-Glove Service</h3>
+      <p class="text-gray-600 mb-6">Professional delivery and expert setup.</p>
+      <a href="#contact" class="text-[#9b903f] font-medium hover:underline">
+        Get Your Rate →
+      </a>
     </div>
 
   </div>
 </section>
 
 
-<!-- Why Choose Us / Services -->
-<section id="services" class="relative -mt-6 py-24 pb-0 px-6 bg-gray-100 font-body overflow-hidden">
-
-  <!-- Subtle brand accent bar -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-[#9b903f]"></div>
-
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-
-    <!-- LEFT: Pitch -->
-    <div class="text-center md:text-left max-w-xl mx-auto md:mx-0">
-      <p class="uppercase tracking-widest text-gray-500 text-sm mb-3">Our Focus</p>
-      <h2 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 leading-tight mb-6">
+<!-- Services Section -->
+<section id="services" class="py-24 px-8 bg-gray-50 font-body">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-4xl sm:text-5xl font-heading font-bold text-gray-900 mb-8">
         Preventative <span class="text-[#9b903f]">Maintenance</span> You Can Trust
       </h2>
-      <p class="text-gray-600 mb-8 text-lg leading-relaxed">
-        At Goshen, we believe maintenance is the most important service you’ll never see—because when it’s done right,
-        nothing breaks. Our preventative programs keep your gym equipment running longer, safer, and stronger—saving you time, money, and injuries down the line.
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        At Goshen, we believe maintenance is the most important service you'll never see—because when it's done right,
+        nothing breaks. Our preventative programs keep your gym equipment running longer, safer, and stronger.
       </p>
-
-      <ul class="space-y-4 mb-10">
-        <li class="flex items-start gap-3">
-          <span class="mt-1 inline-flex items-center justify-center w-5 h-5 bg-[#9b903f] text-white text-xs">✓</span>
-          <span class="text-gray-700 text-base">Extend the life of your machines with proactive service.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1 inline-flex items-center justify-center w-5 h-5 bg-[#9b903f] text-white text-xs">✓</span>
-          <span class="text-gray-700 text-base">Prevent costly breakdowns before they happen.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <span class="mt-1 inline-flex items-center justify-center w-5 h-5 bg-[#9b903f] text-white text-xs">✓</span>
-          <span class="text-gray-700 text-base">Certified maintenance for home and commercial gyms.</span>
-        </li>
-      </ul>
-
-      <a href="#contact"
-         class="inline-block bg-[#9b903f] text-white px-7 py-3 font-heading font-semibold
-                hover:bg-[#8a8138] transition duration-300 shadow-md">
-        Request a Maintenance Plan
-      </a>
     </div>
 
     <!-- Services Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
-
-      <!-- Card: Maintenance -->
-      <div role="article"
-           class="bg-white h-full flex flex-col justify-between p-6 shadow-md border border-gray-200 transition duration-300">
-        <div>
-          <div class="w-12 h-12 flex items-center justify-center mb-4 bg-[#9b903f]/15 text-[#9b903f]">
-            <!-- Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="7" width="18" height="13" rx="2" />
-              <path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" />
-              <path d="M3 12h18" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-lg text-gray-900 mb-2">Maintenance</h3>
-          <p class="text-gray-600 text-sm">
-            Preventative tune-ups and diagnostics to keep your equipment performing at its peak.
-          </p>
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <div class="bg-white p-8 border border-gray-200 text-center">
+        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Maintenance</h3>
+        <p class="text-gray-600">
+          Preventative tune-ups and diagnostics to keep your equipment performing at its peak.
+        </p>
       </div>
 
-      <!-- Card: Delivery -->
-      <div role="article"
-           class="bg-white h-full flex flex-col justify-between p-6 shadow-md border border-gray-200 transition duration-300">
-        <div>
-          <div class="w-12 h-12 flex items-center justify-center mb-4 bg-[#9b903f]/15 text-[#9b903f]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path d="M3 7h11v10H3z" />
-              <path d="M14 10h3l3 3v4h-6V10z" />
-              <circle cx="5.5" cy="17" r="1.5" />
-              <circle cx="16.5" cy="17" r="1.5" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-lg text-gray-900 mb-2">Delivery</h3>
-          <p class="text-gray-600 text-sm">
-            Safe and secure transport for heavy or specialty gym equipment.
-          </p>
-        </div>
+      <div class="bg-white p-8 border border-gray-200 text-center">
+        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Delivery</h3>
+        <p class="text-gray-600">
+          Safe and secure transport for heavy or specialty gym equipment.
+        </p>
       </div>
 
-      <!-- Card: Assembly -->
-      <div role="article"
-           class="bg-white h-full flex flex-col justify-between p-6 shadow-md border border-gray-200 transition duration-300">
-        <div>
-          <div class="w-12 h-12 flex items-center justify-center mb-4 bg-[#9b903f]/15 text-[#9b903f]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path d="M21 16l-5.586-5.586a2 2 0 010-2.828l.586-.586a4 4 0 10-5.657-5.657l-.586.586a2 2 0 01-2.828 0L2 8l6 6" />
-              <path d="M7 21h4" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-lg text-gray-900 mb-2">Assembly</h3>
-          <p class="text-gray-600 text-sm">
-            Professional setup and calibration of all major gym brands and systems.
-          </p>
-        </div>
+      <div class="bg-white p-8 border border-gray-200 text-center">
+        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Assembly</h3>
+        <p class="text-gray-600">
+          Professional setup and calibration of all major gym brands and systems.
+        </p>
       </div>
 
-      <!-- Card: Relocation -->
-      <div role="article"
-           class="bg-white h-full flex flex-col justify-between p-6 shadow-md border border-gray-200 transition duration-300">
-        <div>
-          <div class="w-12 h-12 flex items-center justify-center mb-4 bg-[#9b903f]/15 text-[#9b903f]">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path d="M4 17l5 5 5-5M9 12V2" />
-              <path d="M20 7l-5-5-5 5M15 12v10" />
-            </svg>
-          </div>
-          <h3 class="font-heading font-semibold text-lg text-gray-900 mb-2">Relocation</h3>
-          <p class="text-gray-600 text-sm">
-            Disassembly, transport, and reassembly done right—so your gear stays protected.
-          </p>
-        </div>
+      <div class="bg-white p-8 border border-gray-200 text-center">
+        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Relocation</h3>
+        <p class="text-gray-600">
+          Disassembly, transport, and reassembly done right—so your gear stays protected.
+        </p>
       </div>
 
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-20">
+      <a href="#contact"
+         class="inline-block bg-[#9b903f] text-white px-8 py-4 font-medium text-lg hover:bg-[#8a8138] transition-colors">
+        Request a Maintenance Plan
+      </a>
     </div>
   </div>
 </section>
 
 
-<!-- Annual Maintenance Plan Info -->
-<section class="mt-16 bg-gray-100 py-24 px-6 font-body text-gray-900">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-
-    <!-- Text Content -->
-    <div class="text-left">
-      <p class="uppercase tracking-widest text-gray-500 text-sm mb-3">Annual Protection</p>
-
-      <h3 class="text-[2.25rem] sm:text-[2.75rem] font-heading font-extrabold leading-tight mb-6">
-        Your Annual <span class="text-[#9b903f]">Service Plan</span>
-      </h3>
-
-      <p class="text-base sm:text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl">
-        <strong class="text-[#111] font-semibold">Preventative maintenance</strong> that pays off year after year.
-        Keep your gym running at its best—minimize downtime, extend lifespan, and avoid costly replacements.
-        Our <span class="font-semibold text-gray-900">Basic Plan</span> includes <strong>4 quarterly service visits</strong> covering your most-used equipment:
-        bikes, treadmills, ellipticals, steppers, rowers, and weight machines.
-        It’s <em>reliable, hassle-free protection</em> for the machines your members count on.
-      </p>
-
-      <a href="#contact"
-         class="inline-block bg-[#9b903f] text-white px-7 py-3 font-heading font-semibold text-sm uppercase tracking-wide
-                hover:bg-[#8a8138] transition duration-300 shadow-sm">
-        Request Servicing
-      </a>
-    </div>
-
-    <!-- Callout Box -->
-    <div class="bg-gray-100 border border-gray-200 p-8 rounded-sm shadow-sm text-left">
-      <h4 class="text-2xl sm:text-3xl font-heading font-bold text-gray-900 mb-4">
-        Want to speak with a maintenance expert?
-      </h4>
-      <p class="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-        We’ll help you choose the best protection plan for your equipment, budget, and location.
-      </p>
-      <a href="#contact"
-         class="inline-block bg-black text-white px-6 py-3 text-sm font-bold uppercase tracking-wide hover:bg-gray-800 transition duration-300 rounded-sm">
-        Talk to Our Team
-      </a>
-    </div>
-
+<!-- Annual Maintenance Plan -->
+<section class="py-24 px-8 bg-white font-body">
+  <div class="max-w-4xl mx-auto text-center">
+    <h3 class="text-3xl sm:text-4xl font-heading font-bold text-gray-900 mb-8">
+      Your Annual <span class="text-[#9b903f]">Service Plan</span>
+    </h3>
+    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+      Preventative maintenance that pays off year after year. Keep your gym running at its best—minimize downtime, 
+      extend lifespan, and avoid costly replacements. Our Basic Plan includes 4 quarterly service visits covering 
+      your most-used equipment: bikes, treadmills, ellipticals, steppers, rowers, and weight machines.
+    </p>
+    <a href="#contact"
+       class="inline-block bg-[#9b903f] text-white px-8 py-4 font-medium text-lg hover:bg-[#8a8138] transition-colors">
+      Request Servicing
+    </a>
   </div>
 </section>
 
@@ -459,66 +343,91 @@
 </section>
 
 <!-- Featured Brand Logos -->
-<section class="bg-white py-20 px-6 font-body">
-  <div class="max-w-7xl mx-auto text-center">
+<section class="bg-white py-24 px-8 font-body">
+  <div class="max-w-6xl mx-auto text-center">
 
-    <!-- Accent Bar -->
-    <div class="w-24 h-1 bg-[#9b903f] mx-auto rounded-full mb-6"></div>
-
-    <!-- Tagline -->
-    <p class="uppercase tracking-widest text-gray-500 text-sm mb-3">
-      Trusted by the World’s Leading Fitness Brands
-    </p>
-
-    <!-- Heading -->
-    <h3 class="text-3xl sm:text-4xl font-heading font-extrabold text-gray-900 mb-10">
-      Elite Equipment Backed by Industry Leaders
-    </h3>
-
-    <!-- Grid of Logos -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-y-8 gap-x-10 items-center justify-center mb-10">
-      <!-- Brand logos: repeatable figure blocks -->
-      <figure class="flex flex-col items-center justify-center">
-        <img src="assets/Partner Logos/Partner Logos/body solid.png" alt="Body-Solid fitness equipment logo" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition duration-300" loading="lazy" />
-        <figcaption class="sr-only">Body-Solid</figcaption>
-      </figure>
-      <figure class="flex flex-col items-center justify-center">
-        <img src="assets/Partner Logos/Partner Logos/bodycraft.png" alt="BodyCraft gym equipment logo" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition duration-300" loading="lazy" />
-        <figcaption class="sr-only">BodyCraft</figcaption>
-      </figure>
-      <figure class="flex flex-col items-center justify-center">
-        <img src="assets/Partner Logos/Partner Logos/cybex.png" alt="Cybex strength training logo" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition duration-300" loading="lazy" />
-        <figcaption class="sr-only">Cybex</figcaption>
-      </figure>
-      <figure class="flex flex-col items-center justify-center">
-        <img src="assets/Partner Logos/Partner Logos/hoist.png" alt="Hoist Fitness systems logo" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition duration-300" loading="lazy" />
-        <figcaption class="sr-only">Hoist</figcaption>
-      </figure>
-      <figure class="flex flex-col items-center justify-center">
-        <img src="assets/Partner Logos/Partner Logos/life fitness.png" alt="Life Fitness cardio and strength logo" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition duration-300" loading="lazy" />
-        <figcaption class="sr-only">Life Fitness</figcaption>
-      </figure>
-      <figure class="flex flex-col items-center justify-center">
-        <img src="assets/Partner Logos/Partner Logos/peloton 2.png" alt="Peloton smart cardio logo" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition duration-300" loading="lazy" />
-        <figcaption class="sr-only">Peloton</figcaption>
-      </figure>
-      <figure class="flex flex-col items-center justify-center">
-        <img src="assets/Partner Logos/Partner Logos/precor.png" alt="Precor premium machines logo" class="h-8 sm:h-10 object-contain grayscale hover:grayscale-0 transition duration-300" loading="lazy" />
-        <figcaption class="sr-only">Precor</figcaption>
-      </figure>
-      <figure class="flex flex-col items-center justify-center">
-        <img src="assets/Partner Logos/Partner Logos/true.png" alt="TRUE Fitness commercial equipment logo" class="h-10 sm:h-12 object-contain grayscale hover:grayscale-0 transition duration-300" loading="lazy" />
-        <figcaption class="sr-only">TRUE Fitness</figcaption>
-      </figure>
+    <!-- Header -->
+    <div class="mb-20">
+      <h3 class="text-4xl sm:text-5xl font-heading font-bold text-gray-900 mb-8">
+        Elite Equipment Backed by Industry Leaders
+      </h3>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        We work directly with premium fitness manufacturers to get you the best performance, pricing, and post-purchase support.
+      </p>
     </div>
 
-    <!-- One-liner -->
-    <p class="text-gray-600 text-base sm:text-lg mb-6 max-w-2xl mx-auto leading-relaxed">
-      We work directly with premium fitness manufacturers to get you the best performance, pricing, and post-purchase support.
-    </p>
+    <!-- Brand Logos Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+      
+      <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
+        <img src="assets/Partner Logos/Partner Logos/body solid.png" 
+             alt="Body-Solid fitness equipment logo" 
+             class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+             loading="lazy" />
+        <p class="text-sm text-gray-600 mt-4 font-medium">Body-Solid</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
+        <img src="assets/Partner Logos/Partner Logos/bodycraft.png" 
+             alt="BodyCraft gym equipment logo" 
+             class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+             loading="lazy" />
+        <p class="text-sm text-gray-600 mt-4 font-medium">BodyCraft</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
+        <img src="assets/Partner Logos/Partner Logos/cybex.png" 
+             alt="Cybex strength training logo" 
+             class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+             loading="lazy" />
+        <p class="text-sm text-gray-600 mt-4 font-medium">Cybex</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
+        <img src="assets/Partner Logos/Partner Logos/hoist.png" 
+             alt="Hoist Fitness systems logo" 
+             class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+             loading="lazy" />
+        <p class="text-sm text-gray-600 mt-4 font-medium">Hoist</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
+        <img src="assets/Partner Logos/Partner Logos/life fitness.png" 
+             alt="Life Fitness cardio and strength logo" 
+             class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+             loading="lazy" />
+        <p class="text-sm text-gray-600 mt-4 font-medium">Life Fitness</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
+        <img src="assets/Partner Logos/Partner Logos/peloton 2.png" 
+             alt="Peloton smart cardio logo" 
+             class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+             loading="lazy" />
+        <p class="text-sm text-gray-600 mt-4 font-medium">Peloton</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
+        <img src="assets/Partner Logos/Partner Logos/precor.png" 
+             alt="Precor premium machines logo" 
+             class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+             loading="lazy" />
+        <p class="text-sm text-gray-600 mt-4 font-medium">Precor</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
+        <img src="assets/Partner Logos/Partner Logos/true.png" 
+             alt="TRUE Fitness commercial equipment logo" 
+             class="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300" 
+             loading="lazy" />
+        <p class="text-sm text-gray-600 mt-4 font-medium">TRUE Fitness</p>
+      </div>
+
+    </div>
 
     <!-- CTA Button -->
-    <a href="#contact" class="inline-block bg-[#9b903f] text-white px-7 py-3 font-heading font-semibold text-sm uppercase tracking-wide hover:bg-[#8a8138] transition duration-300 shadow-sm rounded-none">
+    <a href="#contact" 
+       class="inline-block bg-[#9b903f] text-white px-8 py-4 font-medium text-lg hover:bg-[#8a8138] transition-colors">
       Get Brand Recommendations
     </a>
 
@@ -538,180 +447,81 @@
   }
 </style>
 
-<!-- Preventative Maintenance Services Provided -->
-<section class="mt-8 bg-gray-100 py-20 px-6 font-body">
-  <div class="max-w-7xl mx-auto">
-
-    <!-- Heading -->
-    <div class="text-center mb-12" data-animate="fade-up">
-      <span class="inline-block uppercase tracking-widest text-[#9b903f] bg-[#9b903f]/10 text-xs font-semibold px-4 py-1 rounded-sm mb-4">
-        Included Services
-      </span>
-      <h3 class="text-4xl sm:text-5xl font-heading font-extrabold text-gray-900 mb-5 leading-tight">
+<!-- Maintenance Services -->
+<section class="py-24 px-8 bg-gray-50 font-body">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <h3 class="text-4xl sm:text-5xl font-heading font-bold text-gray-900 mb-8">
         Preventative Maintenance <span class="text-[#9b903f]">Services Provided</span>
       </h3>
-      <p class="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
-        Our comprehensive service covers all your most-used equipment. We go beyond quick fixes—our checklist keeps your machines performing at their best to give your members a seamless gym experience.
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Our comprehensive service covers all your most-used equipment. We go beyond quick fixes—our checklist keeps your machines performing at their best.
       </p>
     </div>
 
     <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" data-animate="fade-up">
-
-      <!-- Card: Bikes -->
-      <div class="bg-white rounded-sm shadow-md overflow-hidden flex flex-col h-full">
-        <img src="assets/images/image2.webp" alt="Bike Maintenance" class="h-48 w-full object-cover">
-        <div class="p-6 flex-1 flex flex-col justify-between">
-          <h4 class="text-lg font-heading font-semibold text-gray-900 mb-3">Bikes</h4>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Full test ride to assess real-user performance.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Inspect pedals, crank arms, display, keypad, and chain tension.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Lubricate drivetrain components as needed.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Check and tighten all exterior bolts for safety.</span>
-            </li>
-          </ul>
-        </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="bg-white p-8 border border-gray-200">
+        <h4 class="text-xl font-heading font-semibold mb-4 text-gray-900">Bikes</h4>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Full test ride to assess real-user performance</li>
+          <li>• Inspect pedals, crank arms, display, and chain tension</li>
+          <li>• Lubricate drivetrain components as needed</li>
+          <li>• Check and tighten all exterior bolts for safety</li>
+        </ul>
       </div>
 
-      <!-- Card: Treadmills -->
-      <div class="bg-white rounded-sm shadow-md overflow-hidden flex flex-col h-full">
-        <img src="assets/images/image44.webp" alt="Treadmill Maintenance" class="h-48 w-full object-cover">
-        <div class="p-6 flex-1 flex flex-col justify-between">
-          <h4 class="text-lg font-heading font-semibold text-gray-900 mb-3">Treadmills</h4>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Test run and inspect power functionality and safety systems.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Evaluate belt and deck wear, wax level, and alignment.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Remove motor cover and vacuum dust/debris buildup.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Calibrate speed and incline levels for accuracy.</span>
-            </li>
-          </ul>
-        </div>
+      <div class="bg-white p-8 border border-gray-200">
+        <h4 class="text-xl font-heading font-semibold mb-4 text-gray-900">Treadmills</h4>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Test run and inspect power functionality and safety systems</li>
+          <li>• Evaluate belt and deck wear, wax level, and alignment</li>
+          <li>• Remove motor cover and vacuum dust/debris buildup</li>
+          <li>• Calibrate speed and incline levels for accuracy</li>
+        </ul>
       </div>
 
-      <!-- Card: Ellipticals -->
-      <div class="bg-white rounded-sm shadow-md overflow-hidden flex flex-col h-full">
-        <img src="assets/images/image3.webp" alt="Elliptical Maintenance" class="h-48 w-full object-cover">
-        <div class="p-6 flex-1 flex flex-col justify-between">
-          <h4 class="text-lg font-heading font-semibold text-gray-900 mb-3">Ellipticals</h4>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Test functionality with a full user session.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Inspect pedals, arms, displays, and motion smoothness.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Lubricate internal linkages and rails as needed.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Perform full hardware bolt and casing safety check.</span>
-            </li>
-          </ul>
-        </div>
+      <div class="bg-white p-8 border border-gray-200">
+        <h4 class="text-xl font-heading font-semibold mb-4 text-gray-900">Ellipticals</h4>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Test functionality with a full user session</li>
+          <li>• Inspect pedals, arms, displays, and motion smoothness</li>
+          <li>• Lubricate internal linkages and rails as needed</li>
+          <li>• Perform full hardware bolt and casing safety check</li>
+        </ul>
       </div>
 
-      <!-- Card: Steppers -->
-      <div class="bg-white rounded-sm shadow-md overflow-hidden flex flex-col h-full">
-        <img src="assets/images/image42.webp" alt="Stepper Maintenance" class="h-48 w-full object-cover">
-        <div class="p-6 flex-1 flex flex-col justify-between">
-          <h4 class="text-lg font-heading font-semibold text-gray-900 mb-3">Steppers</h4>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Check for rust, wear, and bubbling under high stress areas.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Inspect and adjust chain or belt tension mechanisms.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Degrease and lubricate moving components.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Verify pedal integrity and machine stability.</span>
-            </li>
-          </ul>
-        </div>
+      <div class="bg-white p-8 border border-gray-200">
+        <h4 class="text-xl font-heading font-semibold mb-4 text-gray-900">Steppers</h4>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Check for rust, wear, and bubbling under high stress areas</li>
+          <li>• Inspect and adjust chain or belt tension mechanisms</li>
+          <li>• Degrease and lubricate moving components</li>
+          <li>• Verify pedal integrity and machine stability</li>
+        </ul>
       </div>
 
-      <!-- Card: Rowers -->
-      <div class="bg-white rounded-sm shadow-md overflow-hidden flex flex-col h-full">
-        <img src="assets/images/image41.webp" alt="Rower Maintenance" class="h-48 w-full object-cover">
-        <div class="p-6 flex-1 flex flex-col justify-between">
-          <h4 class="text-lg font-heading font-semibold text-gray-900 mb-3">Rowers</h4>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Clean monorail thoroughly for consistent glide.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Inspect pedals, arms, handle tension, and chain condition.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Apply lubricant to pivot points if necessary.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Tighten all mounting hardware and connection bolts.</span>
-            </li>
-          </ul>
-        </div>
+      <div class="bg-white p-8 border border-gray-200">
+        <h4 class="text-xl font-heading font-semibold mb-4 text-gray-900">Rowers</h4>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Clean monorail thoroughly for consistent glide</li>
+          <li>• Inspect pedals, arms, handle tension, and chain condition</li>
+          <li>• Apply lubricant to pivot points if necessary</li>
+          <li>• Tighten all mounting hardware and connection bolts</li>
+        </ul>
       </div>
 
-      <!-- Card: Weight Machines -->
-      <div class="bg-white rounded-sm shadow-md overflow-hidden flex flex-col h-full">
-        <img src="assets/images/image18.webp" alt="Weight Machines Maintenance" class="h-48 w-full object-cover">
-        <div class="p-6 flex-1 flex flex-col justify-between">
-          <h4 class="text-lg font-heading font-semibold text-gray-900 mb-3">Weight Machines</h4>
-          <ul class="space-y-2 text-sm text-gray-700">
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Test movement and range of motion under load.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Inspect cables, guide rods, and frame stability.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Lubricate weight stack and adjustment pins.</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-[#9b903f] font-bold mr-2">•</span>
-              <span>Ensure all safety labels and guards are intact.</span>
-            </li>
-          </ul>
-        </div>
+      <div class="bg-white p-8 border border-gray-200">
+        <h4 class="text-xl font-heading font-semibold mb-4 text-gray-900">Weight Machines</h4>
+        <ul class="space-y-2 text-gray-600">
+          <li>• Test movement and range of motion under load</li>
+          <li>• Inspect cables, guide rods, and frame stability</li>
+          <li>• Lubricate weight stack and adjustment pins</li>
+          <li>• Ensure all safety labels and guards are intact</li>
+        </ul>
       </div>
 
     </div>
@@ -719,84 +529,54 @@
 </section>
 
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="relative bg-[#fdfcf7] py-24 px-6 font-body text-gray-800 overflow-hidden">
-  <div class="max-w-6xl mx-auto text-center mb-16">
-    <h2 class="text-4xl sm:text-5xl font-heading font-bold mb-4" data-aos="fade-up">What Our Clients Say</h2>
-    <p class="text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed font-light" data-aos="fade-up" data-aos-delay="100">
-      See why gyms, fitness studios, and homeowners across Alberta trust Goshen for professional equipment care.
-    </p>
-  </div>
-
-  <!-- Desktop Grid -->
-  <div class="hidden md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-left">
-    <blockquote class="bg-white p-6 border border-gray-200 shadow-sm" data-aos="fade-up">
-      <p class="text-base text-gray-800 leading-relaxed mb-4">
-        “Since hiring Goshen, we've had zero unexpected breakdowns. Their preventative service is worth every penny.”
+<!-- Testimonials -->
+<section id="testimonials" class="py-24 px-8 bg-gray-50 font-body">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-4xl sm:text-5xl font-heading font-bold text-gray-900 mb-8">What Our Clients Say</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        See why gyms, fitness studios, and homeowners across Alberta trust Goshen for professional equipment care.
       </p>
-      <footer class="text-sm font-semibold text-gray-900">Sarah J. — Gym Owner</footer>
-    </blockquote>
-
-    <blockquote class="bg-white p-6 border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="100">
-      <p class="text-base text-gray-800 leading-relaxed mb-4">
-        “Goshen didn’t just deliver and install — they optimized our layout and made sure everything ran perfectly.”
-      </p>
-      <footer class="text-sm font-semibold text-gray-900">Tyrell M. — Fitness Studio Manager</footer>
-    </blockquote>
-
-    <blockquote class="bg-white p-6 border border-gray-200 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-      <p class="text-base text-gray-800 leading-relaxed mb-4">
-        “Reliable, responsive, and meticulous. They feel like part of our internal team.”
-      </p>
-      <footer class="text-sm font-semibold text-gray-900">Lena P. — Franchise Owner</footer>
-    </blockquote>
-  </div>
-
-  <!-- Mobile Carousel -->
-  <div class="md:hidden">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <blockquote class="bg-white p-6 border border-gray-200 shadow-sm">
-            <p class="text-base text-gray-800 leading-relaxed mb-4">
-              “We’ve trusted Goshen with all our installs. Always efficient and professional.”
-            </p>
-            <footer class="text-sm font-semibold text-gray-900">Jason T. — Home Gym Client</footer>
-          </blockquote>
-        </div>
-        <div class="swiper-slide">
-          <blockquote class="bg-white p-6 border border-gray-200 shadow-sm">
-            <p class="text-base text-gray-800 leading-relaxed mb-4">
-              “Smoothest relocation I’ve ever seen. Not a scratch. Not a delay.”
-            </p>
-            <footer class="text-sm font-semibold text-gray-900">Amanda R. — Studio Owner</footer>
-          </blockquote>
-        </div>
-        <div class="swiper-slide">
-          <blockquote class="bg-white p-6 border border-gray-200 shadow-sm">
-            <p class="text-base text-gray-800 leading-relaxed mb-4">
-              “Every install is flawless. I recommend Goshen to all my clients.”
-            </p>
-            <footer class="text-sm font-semibold text-gray-900">Marcus L. — Personal Trainer</footer>
-          </blockquote>
-        </div>
-      </div>
-      <div class="swiper-pagination mt-6"></div>
     </div>
-  </div>
 
-  <!-- Background Accent -->
-  <div class="absolute top-0 right-0 w-96 h-96 bg-[#9b903f]/10 rounded-full -z-10 blur-2xl"></div>
-  <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#9b903f]/20 rounded-full -z-10 blur-3xl"></div>
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+      
+      <div class="bg-white p-8 border border-gray-200">
+        <p class="text-gray-800 leading-relaxed mb-4">
+          "Since hiring Goshen, we've had zero unexpected breakdowns. Their preventative service is worth every penny."
+        </p>
+        <footer class="text-sm font-semibold text-gray-900">Sarah J. — Gym Owner</footer>
+      </div>
 
-  <!-- CTA -->
-  <div class="mt-20 text-center" data-aos="fade-up">
-    <h3 class="text-2xl sm:text-3xl font-heading font-semibold text-gray-900 mb-4">
-      Join the growing list of satisfied clients.
-    </h3>
-    <a href="#contact" class="inline-block bg-[#9b903f] text-white font-semibold py-3 px-6 rounded-sm hover:bg-[#8a8138] transition">
-      Get a Free Quote
-    </a>
+      <div class="bg-white p-8 border border-gray-200">
+        <p class="text-gray-800 leading-relaxed mb-4">
+          "Goshen didn't just deliver and install — they optimized our layout and made sure everything ran perfectly."
+        </p>
+        <footer class="text-sm font-semibold text-gray-900">Tyrell M. — Fitness Studio Manager</footer>
+      </div>
+
+      <div class="bg-white p-8 border border-gray-200">
+        <p class="text-gray-800 leading-relaxed mb-4">
+          "Reliable, responsive, and meticulous. They feel like part of our internal team."
+        </p>
+        <footer class="text-sm font-semibold text-gray-900">Lena P. — Franchise Owner</footer>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center">
+      <h3 class="text-2xl sm:text-3xl font-heading font-semibold text-gray-900 mb-8">
+        Join the growing list of satisfied clients.
+      </h3>
+      <a href="#contact" 
+         class="inline-block bg-[#9b903f] text-white px-8 py-4 font-medium text-lg hover:bg-[#8a8138] transition-colors">
+        Get a Free Quote
+      </a>
+    </div>
   </div>
 </section>
 
@@ -957,119 +737,101 @@
 
 
 
-<!-- Contact Section -->
-<section id="contact" class="relative bg-gray-50 font-body text-gray-900 border-t border-gray-200">
+<!-- Contact -->
+<section id="contact" class="py-24 px-8 bg-white font-body">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-4xl sm:text-5xl font-heading font-bold text-gray-900 mb-8">Let's Get to Work</h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Whether you need professional installation, moving services, or repairs, our team is ready to help. 
+        We specialize in commercial and home gym setups across Edmonton and surrounding areas.
+      </p>
+    </div>
 
-  <!-- Content Wrapper -->
-  <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-16 px-6 py-24">
+    <!-- Contact Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      
+      <!-- Contact Info -->
+      <div class="bg-gray-50 p-8 border border-gray-200">
+        <h3 class="text-2xl font-heading font-bold mb-8 text-gray-900">Get In Touch</h3>
+        <div class="space-y-4 text-gray-700">
+          <div>
+            <strong>Email:</strong>
+            <a href="mailto:goshen.harvest.inc@gmail.com" class="text-[#9b903f] hover:underline block">
+              goshen.harvest.inc@gmail.com
+            </a>
+          </div>
+          <div>
+            <strong>Call/Text:</strong>
+            <a href="tel:+17809022041" class="text-[#9b903f] hover:underline block">
+              +1 (780) 902-2041
+            </a>
+          </div>
+          <div>
+            <strong>Service Area:</strong> Edmonton & Surrounding Communities
+          </div>
+        </div>
+      </div>
 
-    <!-- Left Info Panel -->
-<div class="bg-[#f9f7f0] border border-gray-200 shadow-sm p-10 flex flex-col justify-center">
-  <h2 class="text-3xl font-heading font-bold mb-6">Let’s Get to Work</h2>
-  <p class="text-gray-700 mb-8 leading-relaxed">
-    Whether you need professional installation, moving services, or repairs, our team is ready to help. 
-    We specialize in commercial and home gym setups across Edmonton and surrounding areas. 
-    Let us know what you need — we’ll handle the rest.
-  </p>
-  <ul class="space-y-4 text-sm text-gray-800">
-    <li>
-      <strong>Email:</strong>
-      <a href="mailto:goshen.harvest.inc@gmail.com" class="text-[#9b903f] hover:underline">
-        goshen.harvest.inc@gmail.com
-      </a>
-    </li>
-    <li>
-      <strong>Call/Text:</strong>
-      <a href="tel:+17809022041" class="text-[#9b903f] hover:underline">
-        +1 (780) 902-2041
-      </a>
-    </li>
-    <li>
-      <strong>Service Area:</strong> Edmonton & Surrounding Communities
-    </li>
-  </ul>
-</div>
-
-
-    <!-- Contact Form -->
-    <form id="contact-form" action="https://formspree.io/f/mkgzneel" method="POST" class="bg-white border border-gray-200 shadow-sm p-10 space-y-8" novalidate>
-
-      <h2 class="text-3xl font-heading font-bold">Request a Quote</h2>
-      <p class="text-gray-600 text-base -mt-2">Fill out the form and we’ll respond within 24 hours. No pressure — just expert service.</p>
-
-      <!-- Honeypot -->
-      <input type="text" name="_gotcha" style="display:none">
-
-      <!-- Input Fields -->
-      <div class="grid gap-6">
-        <!-- Name -->
+      <!-- Contact Form -->
+      <form id="contact-form" action="https://formspree.io/f/mkgzneel" method="POST" class="space-y-6">
+        <h3 class="text-2xl font-heading font-bold mb-8 text-gray-900">Request a Quote</h3>
+        
         <div>
-          <label for="name" class="block text-sm font-medium text-gray-800 mb-1">Your Name</label>
+          <label for="name" class="block text-sm font-medium text-gray-800 mb-2">Your Name</label>
           <input type="text" name="name" id="name" required
-                 class="w-full border border-gray-300 px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#9b903f]" />
+                 class="w-full border border-gray-300 px-4 py-3 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#9b903f]" />
         </div>
 
-        <!-- Email -->
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-800 mb-1">Your Email</label>
+          <label for="email" class="block text-sm font-medium text-gray-800 mb-2">Your Email</label>
           <input type="email" name="email" id="email" required
-                 class="w-full border border-gray-300 px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#9b903f]" />
+                 class="w-full border border-gray-300 px-4 py-3 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#9b903f]" />
         </div>
 
-        <!-- Phone -->
         <div>
-          <label for="phone" class="block text-sm font-medium text-gray-800 mb-1">Your Phone Number</label>
+          <label for="phone" class="block text-sm font-medium text-gray-800 mb-2">Your Phone Number</label>
           <input type="tel" name="phone" id="phone" required
-                 class="w-full border border-gray-300 px-4 py-3 text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#9b903f]" />
+                 class="w-full border border-gray-300 px-4 py-3 text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-[#9b903f]" />
         </div>
 
-       <!-- Service Type -->
-<div>
-  <label class="block text-sm font-semibold mb-2">Type of Service Needed</label>
-  <div class="flex flex-wrap gap-3">
-    <label>
-      <input type="radio" name="serviceType" value="Installation" class="sr-only peer toggle-radio">
-      <div class="peer-checked:bg-[#9b903f] peer-checked:text-white px-4 py-2 border border-gray-300 text-sm cursor-pointer">
-        Installation
-      </div>
-    </label>
-    <label>
-      <input type="radio" name="serviceType" value="Moving" class="sr-only peer toggle-radio">
-      <div class="peer-checked:bg-[#9b903f] peer-checked:text-white px-4 py-2 border border-gray-300 text-sm cursor-pointer">
-        Moving
-      </div>
-    </label>
-    <label>
-      <input type="radio" name="serviceType" value="Repairs" class="sr-only peer toggle-radio">
-      <div class="peer-checked:bg-[#9b903f] peer-checked:text-white px-4 py-2 border border-gray-300 text-sm cursor-pointer">
-        Repairs
-      </div>
-    </label>
-    <label>
-      <input type="radio" name="serviceType" value="Maintenance" class="sr-only peer toggle-radio">
-      <div class="peer-checked:bg-[#9b903f] peer-checked:text-white px-4 py-2 border border-gray-300 text-sm cursor-pointer">
-        Maintenance
-      </div>
-    </label>
-  </div>
-</div>
-
-
-
-        <!-- Message -->
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-800 mb-1">Message</label>
-          <textarea name="message" id="message" rows="4" required
-                    class="w-full border border-gray-300 px-4 py-3 text-sm text-gray-900 bg-white resize-none focus:outline-none focus:ring-2 focus:ring-[#9b903f]"></textarea>
+          <label class="block text-sm font-medium text-gray-800 mb-2">Type of Service Needed</label>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="flex items-center">
+              <input type="radio" name="serviceType" value="Installation" class="mr-2">
+              Installation
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="serviceType" value="Moving" class="mr-2">
+              Moving
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="serviceType" value="Repairs" class="mr-2">
+              Repairs
+            </label>
+            <label class="flex items-center">
+              <input type="radio" name="serviceType" value="Maintenance" class="mr-2">
+              Maintenance
+            </label>
+          </div>
         </div>
-      </div>
 
-      <!-- Submit -->
-      <button type="submit"
-              class="bg-[#9b903f] text-white px-6 py-3 text-sm font-semibold hover:bg-[#8a8138] transition duration-300">
-        Send Message
-      </button>
-    </form>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-800 mb-2">Message</label>
+          <textarea name="message" id="message" rows="4" required
+                    class="w-full border border-gray-300 px-4 py-3 text-gray-900 bg-white resize-none focus:outline-none focus:ring-2 focus:ring-[#9b903f]"></textarea>
+        </div>
+
+        <button type="submit"
+                class="bg-[#9b903f] text-white px-8 py-4 font-medium text-lg hover:bg-[#8a8138] transition-colors">
+          Send Message
+        </button>
+      </form>
+
+    </div>
   </div>
 </section>
 
@@ -1171,52 +933,45 @@
 
 
 <!-- Footer -->
-<footer class="relative z-10 bg-[#1c2331] text-white pt-20 px-6 font-body">
+<footer class="py-16 px-8 bg-gray-900 text-white font-body">
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Main Footer Content -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      
+      <div>
+        <img src="assets/images/goshen-logo-top.png"
+             alt="Goshen Gym Installs Logo"
+             class="h-12 w-auto mb-4 filter invert" />
+        <p class="text-gray-300">
+          Elevating fitness spaces with premium installations — where function meets form.
+        </p>
+      </div>
 
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+      <div>
+        <h4 class="font-heading font-semibold mb-4">Quick Links</h4>
+        <nav class="space-y-2 text-gray-300">
+          <a href="#services" class="block hover:text-white transition-colors">Services</a>
+          <a href="#portfolio" class="block hover:text-white transition-colors">Portfolio</a>
+          <a href="#testimonials" class="block hover:text-white transition-colors">Testimonials</a>
+          <a href="#contact" class="block hover:text-white transition-colors">Contact</a>
+        </nav>
+      </div>
 
-    <!-- Logo & Slogan -->
-    <div>
-      <img src="assets/images/goshen-logo-top.png"
-     alt="Goshen Gym Installs Logo"
-     class="h-[48px] w-auto mb-4 mx-auto md:mx-0 filter invert" />
+      <div>
+        <h4 class="font-heading font-semibold mb-4">Get In Touch</h4>
+        <div class="space-y-2 text-gray-300">
+          <div>Email: <a href="mailto:goshen.harvest.inc@gmail.com" class="hover:text-white">goshen.harvest.inc@gmail.com</a></div>
+          <div>Call/Text: <a href="tel:+17809022041" class="hover:text-white">+1 (780) 902-2041</a></div>
+          <div>Edmonton, Alberta</div>
+        </div>
+      </div>
 
-      <p class="text-sm text-gray-300 leading-relaxed">
-        Elevating fitness spaces with premium installations — where function meets form.
-      </p>
     </div>
 
-    <!-- Navigation -->
-    <div>
-      <h4 class="text-base font-heading font-semibold mb-4 text-white">Quick Links</h4>
-      <nav class="flex flex-col gap-2 text-sm text-gray-400">
-        <a href="#services" class="hover:text-white transition">Services</a>
-        <a href="#portfolio" class="hover:text-white transition">Portfolio</a>
-        <a href="#testimonials" class="hover:text-white transition">Testimonials</a>
-        <a href="#contact" class="hover:text-white transition">Contact</a>
-      </nav>
-    </div>
-
-    <!-- Contact Info -->
-    <div>
-      <h4 class="text-base font-heading font-semibold mb-4 text-white">Get In Touch</h4>
-      <ul class="text-sm text-gray-400 space-y-2">
-        <li>Email: <a href="mailto:goshen.harvest.inc@gmail.com" class="hover:text-white">goshen.harvest.inc@gmail.com</a></li>
-        <li>Call/Text: <a href="tel:+17809022041" class="hover:text-white">+1 (780) 902-2041</a></li>
-        <li>Edmonton, Alberta</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Divider -->
-  <div class="mt-12 border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
-    &copy; 2025 Goshen Installs. All rights reserved.
-    <div class="mt-3 flex justify-center flex-wrap gap-4">
-      <a href="/terms" class="hover:text-white transition">Terms of Service</a>
-      <a href="/privacy" class="hover:text-white transition">Privacy Policy</a>
-      <a href="https://craytivo.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">
-        Site built by Craytivo
-      </a>
+    <!-- Copyright -->
+    <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+      <p>&copy; 2025 Goshen Installs. All rights reserved.</p>
     </div>
   </div>
 </footer>
