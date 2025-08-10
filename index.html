@@ -178,49 +178,89 @@
 
 
 <!-- Hero Section -->
-<section id="hero" class="bg-white pt-32 pb-24 px-8 font-body text-center text-gray-900 scroll-mt-[120px]">
-  <div class="max-w-4xl mx-auto mb-20">
-    <h1 class="text-5xl sm:text-6xl font-heading font-bold mb-8 text-gray-900">Upgrade Your Gym Experience</h1>
-    <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+<section id="hero" class="relative bg-gradient-to-br from-white via-gray-50 to-white pt-36 pb-32 px-8 font-body text-center text-gray-900 scroll-mt-[120px] overflow-hidden">
+  <!-- Subtle background pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute top-20 left-10 w-32 h-32 bg-[#9b903f] rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-40 h-40 bg-[#9b903f] rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="relative z-10 max-w-5xl mx-auto mb-24">
+    <h1 class="text-6xl sm:text-7xl font-heading font-bold mb-10 text-gray-900 leading-tight">
+      Upgrade Your <span class="text-[#9b903f]">Gym Experience</span>
+    </h1>
+    <p class="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
       We make your ideal gym setup simple — with expert delivery, precision installs, and preventative maintenance that keeps you running strong.
     </p>
   </div>
 
   <!-- Service Grid -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+  <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
     
-    <div class="bg-white border border-gray-200 p-8 text-center hover:border-[#9b903f] transition-colors">
+    <div class="bg-white/80 backdrop-blur-sm border border-gray-200 p-10 text-center hover:border-[#9b903f] hover:shadow-lg transition-all duration-300">
+      <div class="w-16 h-16 bg-[#9b903f]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-[#9b903f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
       <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Preventative Maintenance</h3>
       <p class="text-gray-600 mb-6">Nationwide service, done right.</p>
-      <a href="#contact" class="text-[#9b903f] font-medium hover:underline">
+      <a href="#contact" class="text-[#9b903f] font-medium hover:underline transition-colors">
         Learn More →
       </a>
     </div>
 
-    <div class="bg-white border border-gray-200 p-8 text-center hover:border-[#9b903f] transition-colors">
+    <div class="bg-white/80 backdrop-blur-sm border border-gray-200 p-10 text-center hover:border-[#9b903f] hover:shadow-lg transition-all duration-300">
+      <div class="w-16 h-16 bg-[#9b903f]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-[#9b903f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+        </svg>
+      </div>
       <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Commercial Gym Design</h3>
       <p class="text-gray-600 mb-6">Smart layouts, efficient installs.</p>
-      <a href="#contact" class="text-[#9b903f] font-medium hover:underline">
+      <a href="#contact" class="text-[#9b903f] font-medium hover:underline transition-colors">
         Start Project →
       </a>
     </div>
 
-    <div class="bg-white border border-gray-200 p-8 text-center hover:border-[#9b903f] transition-colors">
+    <div class="bg-white/80 backdrop-blur-sm border border-gray-200 p-10 text-center hover:border-[#9b903f] hover:shadow-lg transition-all duration-300">
+      <div class="w-16 h-16 bg-[#9b903f]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-[#9b903f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+        </svg>
+      </div>
       <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">World-Renowned Brands</h3>
       <p class="text-gray-600 mb-6">Upgrade with the best equipment at the best prices.</p>
-      <a href="#contact" class="text-[#9b903f] font-medium hover:underline">
+      <a href="#contact" class="text-[#9b903f] font-medium hover:underline transition-colors">
         Browse Catalog →
       </a>
     </div>
 
-    <div class="bg-white border border-gray-200 p-8 text-center hover:border-[#9b903f] transition-colors">
+    <div class="bg-white/80 backdrop-blur-sm border border-gray-200 p-10 text-center hover:border-[#9b903f] hover:shadow-lg transition-all duration-300">
+      <div class="w-16 h-16 bg-[#9b903f] rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+        </svg>
+      </div>
       <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">White-Glove Service</h3>
       <p class="text-gray-600 mb-6">Professional delivery and expert setup.</p>
-      <a href="#contact" class="text-[#9b903f] font-medium hover:underline">
+      <a href="#contact" class="text-[#9b903f] font-medium hover:underline transition-colors">
         Get Your Rate →
       </a>
     </div>
 
+  </div>
+
+  <!-- Hero CTA -->
+  <div class="relative z-10 text-center">
+    <a href="#contact" 
+       class="inline-flex items-center gap-3 bg-[#9b903f] text-white px-10 py-4 text-lg font-heading font-semibold hover:bg-[#8a8138] hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+      <span>Get Your Free Quote</span>
+      <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+      </svg>
+    </a>
+    <p class="text-gray-500 text-sm mt-4">No commitment required • Response within 24 hours</p>
   </div>
 </section>
 
@@ -232,73 +272,168 @@
     <!-- Header -->
     <div class="text-center mb-20">
       <h2 class="text-4xl sm:text-5xl font-heading font-bold text-gray-900 mb-8">
-        Preventative <span class="text-[#9b903f]">Maintenance</span> You Can Trust
+        Preventative <span class="text-[#9b903f]">Maintenance</span> That Pays for Itself
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        At Goshen, we believe maintenance is the most important service you'll never see—because when it's done right,
-        nothing breaks. Our preventative programs keep your gym equipment running longer, safer, and stronger.
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        Stop playing the waiting game with your gym equipment. Our preventative maintenance program isn't just a service—it's your insurance policy against costly breakdowns, member complaints, and unexpected downtime.
       </p>
     </div>
 
+    <!-- Value Proposition -->
+    <div class="bg-white border border-gray-200 p-12 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-heading font-bold text-[#9b903f] mb-2">$0</div>
+          <div class="text-lg font-semibold text-gray-900 mb-2">Unexpected Repairs</div>
+          <div class="text-gray-600">No more surprise bills or emergency service calls</div>
+        </div>
+        <div>
+          <div class="text-4xl font-heading font-bold text-[#9b903f] mb-2">100%</div>
+          <div class="text-lg font-semibold text-gray-900 mb-2">Equipment Uptime</div>
+          <div class="text-gray-600">Keep your gym running smoothly every day</div>
+        </div>
+        <div>
+          <div class="text-4xl font-heading font-bold text-[#9b903f] mb-2">5x</div>
+          <div class="text-lg font-semibold text-gray-900 mb-2">Longer Equipment Life</div>
+          <div class="text-gray-600">Extend the lifespan of your investment</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
       
-      <div class="bg-white p-8 border border-gray-200 text-center">
-        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Maintenance</h3>
+      <div class="bg-white p-8 border border-gray-200 text-center hover:border-[#9b903f] transition-colors">
+        <div class="w-16 h-16 bg-[#9b903f]/10 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-[#9b903f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Preventative Care</h3>
         <p class="text-gray-600">
-          Preventative tune-ups and diagnostics to keep your equipment performing at its peak.
+          Quarterly inspections and tune-ups that catch problems before they become expensive disasters.
         </p>
       </div>
 
-      <div class="bg-white p-8 border border-gray-200 text-center">
-        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Delivery</h3>
+      <div class="bg-white p-8 border border-gray-200 text-center hover:border-[#9b903f] transition-colors">
+        <div class="w-16 h-16 bg-[#9b903f]/10 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-[#9b903f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Smart Delivery</h3>
         <p class="text-gray-600">
-          Safe and secure transport for heavy or specialty gym equipment.
+          Professional delivery and installation that ensures your equipment arrives ready to perform.
         </p>
       </div>
 
-      <div class="bg-white p-8 border border-gray-200 text-center">
-        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Assembly</h3>
+      <div class="bg-white p-8 border border-gray-200 text-center hover:border-[#9b903f] transition-colors">
+        <div class="w-16 h-16 bg-[#9b903f]/10 flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-[#9b903f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Expert Assembly</h3>
         <p class="text-gray-600">
-          Professional setup and calibration of all major gym brands and systems.
+          Professional setup and calibration that maximizes performance and safety from day one.
         </p>
       </div>
 
-      <div class="bg-white p-8 border border-gray-200 text-center">
-        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Relocation</h3>
+      <div class="bg-white p-8 border border-gray-200 text-center hover:border-[#9b903f] transition-colors">
+        <div class="w-16 h-16 bg-[#9b903f] flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-heading font-semibold mb-4 text-gray-900">Seamless Relocation</h3>
         <p class="text-gray-600">
-          Disassembly, transport, and reassembly done right—so your gear stays protected.
+          Professional moving services that protect your investment during transitions.
         </p>
       </div>
 
+    </div>
+
+    <!-- Cost Comparison -->
+    <div class="bg-white border border-gray-200 p-12 mb-16">
+      <h3 class="text-2xl font-heading font-bold text-gray-900 mb-8 text-center">The Math is Simple</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h4 class="text-lg font-heading font-semibold text-red-600 mb-4">Without Preventative Maintenance:</h4>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <span class="text-red-500 mr-2">✗</span>
+              <span>Emergency repairs: <strong>$500-2000+ per incident</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-500 mr-2">✗</span>
+              <span>Equipment downtime: <strong>Lost revenue & member frustration</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-500 mr-2">✗</span>
+              <span>Premature replacement: <strong>$10,000-50,000+ per machine</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-red-500 mr-2">✗</span>
+              <span>Stress & uncertainty: <strong>Priceless</strong></span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-heading font-semibold text-green-600 mb-4">With Our Preventative Program:</h4>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Predictable costs: <strong>$150-300 per quarter</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Maximum uptime: <strong>Equipment always ready</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Extended lifespan: <strong>5-10+ years of reliable service</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-2">✓</span>
+              <span>Peace of mind: <strong>Priceless</strong></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Annual Service Plan Integration -->
+    <div class="bg-white border border-gray-200 p-12 mb-16">
+      <div class="text-center">
+        <h3 class="text-2xl font-heading font-bold text-gray-900 mb-6">
+          Your Annual <span class="text-[#9b903f]">Service Plan</span>
+        </h3>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Recurring maintenance plans are available and will take all worries away. Keep your gym running at its best—minimize downtime, 
+          extend lifespan, and avoid costly replacements. Our Basic Plan includes 4 quarterly service visits covering 
+          your most-used equipment: bikes, treadmills, ellipticals, steppers, rowers, and weight machines.
+        </p>
+      </div>
     </div>
 
     <!-- CTA -->
-    <div class="text-center mt-20">
-      <a href="#contact"
-         class="inline-block bg-[#9b903f] text-white px-8 py-4 font-medium text-lg hover:bg-[#8a8138] transition-colors">
-        Request a Maintenance Plan
-      </a>
+    <div class="text-center">
+      <h3 class="text-2xl font-heading font-bold text-gray-900 mb-6">Stop Waiting for Something to Break</h3>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Join the smart gym owners who've eliminated equipment headaches and maximized their ROI.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact"
+           class="inline-block bg-[#9b903f] text-white px-10 py-4 font-medium text-lg hover:bg-[#8a8138] transition-colors">
+          Get Your Free Quote
+        </a>
+        <a href="#contact"
+           class="inline-block border border-[#9b903f] text-[#9b903f] px-10 py-4 font-medium text-lg hover:bg-[#9b903f] hover:text-white transition-colors">
+          Schedule a Consultation
+        </a>
+      </div>
     </div>
-  </div>
-</section>
-
-
-<!-- Annual Maintenance Plan -->
-<section class="py-24 px-8 bg-white font-body">
-  <div class="max-w-4xl mx-auto text-center">
-    <h3 class="text-3xl sm:text-4xl font-heading font-bold text-gray-900 mb-8">
-      Your Annual <span class="text-[#9b903f]">Service Plan</span>
-    </h3>
-    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-      Preventative maintenance that pays off year after year. Keep your gym running at its best—minimize downtime, 
-      extend lifespan, and avoid costly replacements. Our Basic Plan includes 4 quarterly service visits covering 
-      your most-used equipment: bikes, treadmills, ellipticals, steppers, rowers, and weight machines.
-    </p>
-    <a href="#contact"
-       class="inline-block bg-[#9b903f] text-white px-8 py-4 font-medium text-lg hover:bg-[#8a8138] transition-colors">
-      Request Servicing
-    </a>
   </div>
 </section>
 
@@ -307,7 +442,7 @@
 
 
 <!-- PREMIUM BRANDS & CUTTING-EDGE EQUIPMENT -->
-<section class="relative py-24 px-6 bg-gray-100 font-body overflow-hidden">
+<section class="relative py-24 px-8 bg-gray-100 font-body overflow-hidden">
   <!-- Accent bar -->
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-[#9b903f] rounded-b-full"></div>
 
@@ -357,7 +492,7 @@
     </div>
 
     <!-- Brand Logos Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20">
       
       <div class="flex flex-col items-center justify-center p-8 bg-gray-50 border border-gray-200 hover:border-[#9b903f] transition-colors">
         <img src="assets/Partner Logos/Partner Logos/body solid.png" 
@@ -635,13 +770,13 @@
 </script>
 
 <!-- Portfolio Section -->
-<section id="portfolio" class="relative bg-white py-24 px-6 font-body text-gray-900">
+<section id="portfolio" class="relative bg-white py-24 px-8 font-body text-gray-900">
   <div class="max-w-7xl mx-auto">
 
     <!-- Heading -->
-    <div class="mb-14 text-center" data-aos="fade-up">
-      <h2 class="text-4xl font-heading font-extrabold tracking-tight mb-4">Our Installations</h2>
-      <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+    <div class="mb-20 text-center" data-aos="fade-up">
+      <h2 class="text-4xl font-heading font-extrabold tracking-tight mb-8">Our Installations</h2>
+      <p class="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
         Explore our work — from luxury home gyms to full commercial setups. Every install is done with precision and care.
       </p>
     </div>
@@ -655,8 +790,8 @@
     <!-- CTA -->
     <div class="mt-24 text-center" data-aos="fade-up" data-aos-delay="200">
       <div class="inline-block bg-[#9b903f]/10 px-8 py-10 shadow-xl border border-[#9b903f]/20 max-w-xl mx-auto">
-        <h3 class="text-3xl font-heading font-bold mb-2">Start Your Project With Us</h3>
-        <p class="text-gray-700 mb-6 text-base sm:text-lg">
+        <h3 class="text-3xl font-heading font-bold mb-6">Start Your Project With Us</h3>
+        <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
           Let’s bring your gym vision to life — from delivery to full install.
         </p>
         <a href="#contact"
